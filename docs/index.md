@@ -8,25 +8,79 @@ sidebar_position: 1
 
 Konstruktive Unterstützung beschreibt professionelles Lehrkräftehandeln, das Lernende **fachlich, emotional und strategisch** so begleitet, dass sie Aufgaben **zunehmend selbstständig** bewältigen können. Sie ist eng verbunden mit **positiver Fehlerkultur**, **Scaffolding** und **lernprozessbezogenem Feedback**.
 
-Diese Seite richtet sich an **Lehrkräfte und angehende Lehrkräfte** und führt praxisnah in das Thema ein – mit Beispielen aus dem **(Informatik-/Webentwicklungs-)Unterricht**, Übungen und Quizzes.
 
 ---
 
-## Warum konstruktive Unterstützung?
+## Ziel: Selbstständige Entwicklung
 
-Gerade in anspruchsvollen Lernbereichen (z. B. Programmieren, Problemlösen, Modellieren) zeigen sich typische Risiken:
+Das Ziel konstruktiver Unterstützung ist es, die **selbstständige Entwicklung** der Lernenden zu fördern. Konstruktive Unterstützung wird ermöglich durch
 
-* Überforderung durch Komplexität
-* Frustration bei Fehlern
-* Rückzug oder bloßes Abschreiben
+* Positive Beziehung zu den Lernenden
+* Formatives Assessment und Feedback
+* Positive Fehlerkultur
+* Dosierte, abgestufte Hilfestellung (Scaffolding)
 
-➡ Konstruktive Unterstützung zielt darauf ab,
 
-* Lernprozesse **sichtbar** zu machen,
-* Fehler **lernwirksam** zu nutzen,
-* und die **Selbstwirksamkeit** der Lernenden zu stärken.
+## Zone der nächsten Entwicklung
+Wirksames Lernen findet in der Zone zwischen Unterforderung und Überforderung statt. Die konstruktive Unterstützung soll Lernen in dieser Zone ermöglichen. [Text ausarbeiten]
+
+export const Zone = ({ title, subtitle, isCenter }) => (
+  <div style={{
+    flex: 1,
+    padding: '20px',
+    textAlign: 'center',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    border: isCenter ? '2px solid white' : 'none',
+    margin: isCenter ? '4px' : '0',
+    borderRadius: '4px'
+  }}>
+    <div style={{ fontWeight: 'bold', fontSize: '1.1rem', marginBottom: '8px' }}>{title}</div>
+    <div style={{ fontSize: '0.9rem' }}>{subtitle}</div>
+  </div>
+);
+
+
+<div style={{ width: '100%', fontFamily: 'sans-serif', margin: '2rem 0' }}>
+  <div style={{
+    display: 'flex',
+    minHeight: '200px',
+    borderRadius: '8px',
+    overflow: 'hidden',
+    color: 'black',
+    background: 'linear-gradient(to right, #82ada9, #e9c46a, #e76f51)'
+  }}>
+    <Zone 
+      title="Unterforderung" 
+      subtitle="Aufgaben können selbstständig ohne Hilfe bewältigt werden." 
+    />
+    <Zone 
+      title="Zone der nächsten Entwicklung" 
+      subtitle="Aufgaben können mit Unterstützung anderer bewältigt werden."
+      isCenter={true}
+    />
+    <Zone 
+      title="Überforderung" 
+      subtitle="Aufgaben können auch mit Hilfe anderer nicht bewältigt werden." 
+    />
+  </div>
+  <div style={{ textAlign: 'center', marginTop: '10px', fontSize: '0.8rem', fontStyle: 'italic' }}>
+    ◀ —————————————————— Aufgabenschwierigkeit —————————————————— ▶
+  </div>
+</div>
 
 ---
+
+## Alltägliche Situation in Klassenzimmern
+
+
+
+Die alltägliche Situation in Klassenzimmern zeigt oftmals ein diffuses Bild. Neben unterforderten Lernenden gibt es Überforderte, die eventuell viel Zeit der Lehrkraft benötigen. Daneben ist es typisch, dass sich Lösungen in Sitzreihen ausbreiten und es schwierig zu bestimmen ist, wo ihr Ursprung liegt. Dazu gibt es "unbekannte" Inseln, die schwer erreichbar sind oder an denen Personen sitzen, die der Lehrkraft nicht auffallen.
+![Beschreibung der Grafik](./klassenzimmer.jpg)
+
+---
+
 
 ## Zentrale Bausteine konstruktiver Unterstützung
 
@@ -83,6 +137,10 @@ Nicht jeder Fehler ist gleich – für konstruktive Unterstützung ist die **Ein
 ]} />
 
 </details>
+
+
+Scaffolding
+Sie ist die gerade richtig dosierte Begleitung selbstbestimmten Lernens.
 
 ---
 
