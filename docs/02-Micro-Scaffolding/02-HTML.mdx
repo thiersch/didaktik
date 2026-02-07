@@ -1,0 +1,552 @@
+---
+title: HTML
+---
+
+# HTML-Grundlagen
+
+1. Finde den Fehler im Code.
+2. Formuliere eine minimale Hilfestellung.
+3. Formuliere eine stärkere Hilfestellung.
+
+## Beispiel
+
+```html {}
+<html lang="de">
+</htlm>
+```
+
+:::tip[Hilfe]
+
+<details>
+<summary>Tipp 1</summary>
+
+Haben Sie alle geöffneten Tags wieder korrekt geschlossen?
+</details>
+
+<details>
+<summary>Tipp 2</summary>
+
+Ein schließendes Tag muss exakt so heißen wie das öffnende Tag, abgesehen vom `/` davor. Ist das in Ihrem Code so?
+</details>
+
+:::
+
+:::danger[Lösung]
+
+<details>
+<summary>Der korrigierte Code</summary>
+
+```html {2}
+<html lang="de">
+</html>
+```
+
+</details>
+
+:::
+
+
+---
+
+## Übung 1
+
+```html
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <titel>Skitag<titel>
+  </head>
+```
+
+:::danger[Lösung]
+<details>
+  <summary>Der korrigierte Code</summary>
+
+```html {4}
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <title>Skitag<title>
+  </head>
+```
+
+</details>
+
+:::
+
+---
+
+## Übung 2
+
+```html
+<h1>Willkommen
+<p>Das ist meine erste Seite.</p>
+```
+
+:::tip[Hilfe]
+
+<details>
+<summary>Tipp 1</summary>
+
+Schauen Sie sich an, welche Tags Sie geöffnet haben.
+</details>
+
+<details>
+<summary>Tipp 2</summary>
+
+Jedes HTML-Element, das geöffnet wird, braucht in der Regel auch ein passendes schließendes Tag.
+</details>
+
+:::
+
+:::danger[Lösung]
+
+<details>
+<summary>Der korrigierte Code</summary>
+
+```html
+<h1>Willkommen</h1>
+<p>Das ist meine erste Seite.</p>
+```
+
+</details>
+
+:::
+
+---
+
+## Übung 3
+
+```html
+<a src="https://www.wikipedia.org">Wikipedia</a>
+```
+
+:::tip[Hilfe]
+
+<details>
+<summary>Tipp 1</summary>
+
+Überlegen Sie, welches Attribut angibt, wohin ein Link führt.
+</details>
+
+<details>
+<summary>Tipp 2</summary>
+
+Das Attribut, das Sie hier verwenden, gehört normalerweise zu einem anderen HTML-Element.
+</details>
+
+:::
+
+:::danger[Lösung]
+
+<details>
+<summary>Der korrigierte Code</summary>
+
+```html
+<a href="https://www.wikipedia.org">Wikipedia</a>
+```
+
+</details>
+
+:::
+
+---
+
+## Übung 4
+
+```html
+<img>bild.jpg</img>
+```
+
+:::tip[Hilfe]
+
+<details>
+<summary>Tipp 1</summary>
+
+Nicht alle HTML-Elemente haben einen Inhalt zwischen Öffnen und Schließen.
+</details>
+
+<details>
+<summary>Tipp 2</summary>
+
+Ein Bild benötigt kein schließendes Tag, sondern nur eine Angabe, wo die Bilddatei liegt.
+</details>
+
+:::
+
+:::danger[Lösung]
+
+<details>
+<summary>Der korrigierte Code</summary>
+
+```html
+<img src="bild.jpg">
+```
+
+</details>
+
+:::
+
+---
+
+## Übung 5
+
+```html
+<ul>
+  <li>Apfel</li>
+  <li>Banane</li>
+```
+
+:::tip[Hilfe]
+
+<details>
+<summary>Tipp 1</summary>
+
+Welche HTML-Elemente gehören immer paarweise zusammen?
+</details>
+
+<details>
+<summary>Tipp 2</summary>
+
+Überprüfen Sie, ob alle Listen-Tags korrekt geöffnet und geschlossen wurden.
+</details>
+
+:::
+
+:::danger[Lösung]
+
+<details>
+<summary>Der korrigierte Code</summary>
+
+```html
+<ul>
+  <li>Apfel</li>
+  <li>Banane</li>
+</ul>
+```
+
+</details>
+
+:::
+
+---
+
+## Übung 6
+
+```html
+<img src="Bild.JPG">
+```
+
+:::tip[Hilfe]
+
+<details>
+<summary>Tipp 1</summary>
+
+Vergleichen Sie den Dateinamen im Code mit dem tatsächlichen Dateinamen.
+</details>
+
+<details>
+<summary>Tipp 2</summary>
+
+HTML unterscheidet zwischen Groß- und Kleinschreibung bei Dateinamen.
+</details>
+
+:::
+
+:::danger[Lösung]
+
+<details>
+<summary>Der korrigierte Code</summary>
+
+```html
+<img src="bild.jpg">
+```
+
+</details>
+
+:::
+
+
+---
+
+## Übung 7 – Falsch geschriebener Tag
+
+```html
+<p>Das ist ein Absatz</pp>
+```
+
+:::tip[Hilfe]
+
+<details>
+<summary>Tipp 1</summary>
+
+Vergleichen Sie den öffnenden und den schließenden Tag.
+</details>
+
+<details>
+<summary>Tipp 2</summary>
+
+Der Name des schließenden Tags muss exakt dem öffnenden entsprechen.
+</details>
+
+:::
+
+:::danger[Lösung]
+
+<details>
+<summary>Der korrigierte Code</summary>
+
+```html
+<p>Das ist ein Absatz</p>
+```
+
+</details>
+
+:::
+
+---
+
+## Übung 8 – Verschachtelung von Elementen
+
+```html
+<p>Das ist <strong>wichtig</p></strong>
+```
+
+:::tip[Hilfe]
+
+<details>
+<summary>Tipp 1</summary>
+
+Achten Sie auf die Reihenfolge, in der Tags geöffnet und geschlossen werden.
+</details>
+
+<details>
+<summary>Tipp 2</summary>
+
+HTML-Tags müssen wie Klammern korrekt ineinander verschachtelt sein.
+</details>
+
+:::
+
+:::danger[Lösung]
+
+<details>
+<summary>Der korrigierte Code</summary>
+
+```html
+<p>Das ist <strong>wichtig</strong></p>
+```
+
+</details>
+
+:::
+
+---
+
+## Übung 9 – Fehlendes Attribut bei Bildern
+
+```html
+<img alt="Ein Foto">
+```
+
+:::tip[Hilfe]
+
+<details>
+<summary>Tipp 1</summary>
+
+Ein Bild braucht eine Angabe, wo die Datei liegt.
+</details>
+
+<details>
+<summary>Tipp 2</summary>
+
+Überlegen Sie, welches Attribut die Quelle eines Bildes beschreibt.
+</details>
+
+:::
+
+:::danger[Lösung]
+
+<details>
+<summary>Der korrigierte Code</summary>
+
+```html
+<img src="foto.jpg" alt="Ein Foto">
+```
+
+</details>
+
+:::
+
+---
+
+## Übung 10 – Link ohne sichtbaren Text
+
+```html
+<a href="https://example.com"></a>
+```
+
+:::tip[Hilfe]
+
+<details>
+<summary>Tipp 1</summary>
+
+Überlegen Sie, was Nutzerinnen und Nutzer anklicken sollen.
+</details>
+
+<details>
+<summary>Tipp 2</summary>
+
+Ein Link braucht einen sichtbaren Inhalt zwischen den Tags.
+</details>
+
+:::
+
+:::danger[Lösung]
+
+<details>
+<summary>Der korrigierte Code</summary>
+
+```html
+<a href="https://example.com">Zur Beispielseite</a>
+```
+
+</details>
+
+:::
+
+---
+
+## Übung 11 – Formular: fehlendes Attribut
+
+```html
+<form>
+  <input type="text">
+</form>
+```
+
+:::tip[Hilfe]
+
+<details>
+<summary>Tipp 1</summary>
+
+Formulare senden Daten mit Namen.
+</details>
+
+<details>
+<summary>Tipp 2</summary>
+
+Überlegen Sie, welches Attribut dem Eingabefeld einen Schlüssel gibt.
+</details>
+
+:::
+
+:::danger[Lösung]
+
+<details>
+<summary>Der korrigierte Code</summary>
+
+```html
+<form>
+  <input type="text" name="username">
+</form>
+```
+
+</details>
+
+:::
+
+---
+
+## Übung 12 – Formular: Label und Input
+
+```html
+<label>Name</label>
+<input type="text" id="name">
+```
+
+:::tip[Hilfe]
+
+<details>
+<summary>Tipp 1</summary>
+
+Labels sind mit Eingabefeldern verknüpft.
+</details>
+
+<details>
+<summary>Tipp 2</summary>
+
+Überlegen Sie, welches Attribut beim Label auf das Input verweist.
+</details>
+
+:::
+
+:::danger[Lösung]
+
+<details>
+<summary>Der korrigierte Code</summary>
+
+```html
+<label for="name">Name</label>
+<input type="text" id="name">
+```
+
+</details>
+
+:::
+
+---
+
+## Übung 13 – Formular: Button-Typ
+
+```html
+<form>
+  <button>Senden</button>
+</form>
+```
+
+:::tip[Hilfe]
+
+<details>
+<summary>Tipp 1</summary>
+
+Buttons haben unterschiedliche Aufgaben.
+</details>
+
+<details>
+<summary>Tipp 2</summary>
+
+Überlegen Sie, welcher Typ ein Formular abschickt.
+</details>
+
+:::
+
+:::danger[Lösung]
+
+<details>
+<summary>Der korrigierte Code</summary>
+
+```html
+<form>
+  <button type="submit">Senden</button>
+</form>
+```
+
+</details>
+
+:::
+
+<details>
+  <summary>Übung: Netzwerk-Typ zuordnen</summary>
+
+<ItemMatch taskData={[
+  { id: 'home', text: 'Dein Heimnetzwerk mit Laptop, Smartphone und Drucker.', answer: 'LAN' },
+  { id: 'bluetooth', text: 'Ein Bluetooth-Headset, das mit deinem Handy verbunden ist.', answer: 'PAN' },
+  { id: 'internet', text: 'Das Internet, das Länder und Kontinente verbindet.', answer: 'WAN' },
+  { id: 'uni', text: 'Das Netzwerk, das die verschiedenen Campus-Gebäude der Universität verbindet.', answer: 'MAN' },
+  { id: 'multicorp', text: 'Das Netzwerk eines Konzerns mit Niederlassungen in New York, London und Tokio.', answer: 'GAN' },
+]} />
+
+</details>
+
+---

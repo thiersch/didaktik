@@ -1,0 +1,426 @@
+# JavaScript-Grundlagen – Micro-Scaffolding
+
+Die folgenden Übungen sind für JavaScript in der Konsole gedacht  
+(z. B. Browser-Konsole oder Node.js).  
+Es sind keine HTML- oder CSS-Kenntnisse erforderlich.
+
+---
+
+## Übung 1 – Groß- und Kleinschreibung
+
+```js
+let punkte = 10;
+console.log(Punkte);
+```
+
+:::tip[Hilfe]
+
+<details>
+<summary>Tipp 1</summary>
+
+Vergleichen Sie die beiden Bezeichner genau.
+</details>
+
+<details>
+<summary>Tipp 2</summary>
+
+JavaScript unterscheidet zwischen Groß- und Kleinschreibung bei Variablennamen.
+</details>
+
+:::
+
+:::danger[Lösung]
+
+<details>
+<summary>Der korrigierte Code</summary>
+
+```js
+let punkte = 10;
+console.log(punkte);
+```
+
+</details>
+
+:::
+
+---
+
+## Übung 2 – Variable ohne Wert
+
+```js
+let name;
+console.log(name);
+```
+
+:::tip[Hilfe]
+
+<details>
+<summary>Tipp 1</summary>
+
+Überlegen Sie, wann eine Variable einen Wert bekommt.
+</details>
+
+<details>
+<summary>Tipp 2</summary>
+
+Eine Variable ist erst dann nutzbar, wenn ihr ein Wert zugewiesen wurde.
+</details>
+
+:::
+
+:::danger[Lösung]
+
+<details>
+<summary>Eine mögliche Lösung</summary>
+
+```js
+let name = "Alex";
+console.log(name);
+```
+
+</details>
+
+:::
+
+---
+
+## Übung 3 – Zahl oder Text?
+
+```js
+let a = "5";
+let b = 3;
+console.log(a + b);
+```
+
+:::tip[Hilfe]
+
+<details>
+<summary>Tipp 1</summary>
+
+Überlegen Sie, welchen Typ die beiden Werte haben.
+</details>
+
+<details>
+<summary>Tipp 2</summary>
+
+Der Plus-Operator verhält sich bei Text anders als bei Zahlen.
+</details>
+
+:::
+
+:::danger[Lösung]
+
+<details>
+<summary>Eine mögliche Lösung</summary>
+
+```js
+let a = 5;
+let b = 3;
+console.log(a + b);
+```
+
+</details>
+
+:::
+
+---
+
+## Übung 4 – Vergleich oder Zuweisung
+
+```js
+let x = 5;
+
+if (x = 10) {
+  console.log("Treffer");
+}
+```
+
+:::tip[Hilfe]
+
+<details>
+<summary>Tipp 1</summary>
+
+Achten Sie auf die Anzahl der Gleichheitszeichen.
+</details>
+
+<details>
+<summary>Tipp 2</summary>
+
+Ein Gleichheitszeichen weist zu, zwei oder drei vergleichen.
+</details>
+
+:::
+
+:::danger[Lösung]
+
+<details>
+<summary>Der korrigierte Code</summary>
+
+```js
+let x = 5;
+
+if (x === 10) {
+  console.log("Treffer");
+}
+```
+
+</details>
+
+:::
+
+---
+
+## Übung 5 – Endlosschleife
+
+```js
+let i = 0;
+
+while (i < 5) {
+  console.log(i);
+}
+```
+
+:::tip[Hilfe]
+
+<details>
+<summary>Tipp 1</summary>
+
+Überlegen Sie, warum die Bedingung immer wahr bleibt.
+</details>
+
+<details>
+<summary>Tipp 2</summary>
+
+Der Schleifenwert muss sich bei jedem Durchlauf verändern.
+</details>
+
+:::
+
+:::danger[Lösung]
+
+<details>
+<summary>Der korrigierte Code</summary>
+
+```js
+let i = 0;
+
+while (i < 5) {
+  console.log(i);
+  i++;
+}
+```
+
+</details>
+
+:::
+
+---
+
+## Übung 6 – Funktion wird nicht ausgeführt
+
+```js
+function sagHallo() {
+  console.log("Hallo");
+}
+```
+
+:::tip[Hilfe]
+
+<details>
+<summary>Tipp 1</summary>
+
+Eine Funktion zu definieren ist nicht dasselbe wie sie zu benutzen.
+</details>
+
+<details>
+<summary>Tipp 2</summary>
+
+Überlegen Sie, wie eine Funktion aufgerufen wird.
+</details>
+
+:::
+
+:::danger[Lösung]
+
+<details>
+<summary>Eine mögliche Lösung</summary>
+
+```js
+function sagHallo() {
+  console.log("Hallo");
+}
+
+sagHallo();
+```
+
+</details>
+
+:::
+
+---
+
+## Übung 7 – Fehlender Rückgabewert
+
+```js
+function addiere(a, b) {
+  a + b;
+}
+
+console.log(addiere(2, 3));
+```
+
+:::tip[Hilfe]
+
+<details>
+<summary>Tipp 1</summary>
+
+Überlegen Sie, was mit dem Ergebnis der Rechnung passiert.
+</details>
+
+<details>
+<summary>Tipp 2</summary>
+
+Funktionen geben nur dann etwas zurück, wenn sie dazu aufgefordert werden.
+</details>
+
+:::
+
+:::danger[Lösung]
+
+<details>
+<summary>Der korrigierte Code</summary>
+
+```js
+function addiere(a, b) {
+  return a + b;
+}
+
+console.log(addiere(2, 3));
+```
+
+</details>
+
+:::
+
+---
+
+## Übung 8 – Zugriff auf ein Array
+
+```js
+let farben = ["rot", "blau", "grün"];
+console.log(farben[3]);
+```
+
+:::tip[Hilfe]
+
+<details>
+<summary>Tipp 1</summary>
+
+Überlegen Sie, bei welcher Zahl das Zählen beginnt.
+</details>
+
+<details>
+<summary>Tipp 2</summary>
+
+Das letzte Element hat nicht denselben Index wie die Länge des Arrays.
+</details>
+
+:::
+
+:::danger[Lösung]
+
+<details>
+<summary>Eine mögliche Lösung</summary>
+
+```js
+let farben = ["rot", "blau", "grün"];
+console.log(farben[2]);
+```
+
+</details>
+
+:::
+
+---
+
+## Übung 9 – Länge eines Arrays
+
+```js
+let zahlen = [1, 2, 3];
+console.log(zahlen[zahlen.length]);
+```
+
+:::tip[Hilfe]
+
+<details>
+<summary>Tipp 1</summary>
+
+Was sagt length genau aus?
+</details>
+
+<details>
+<summary>Tipp 2</summary>
+
+Der höchste Index ist immer eins kleiner als die Länge.
+</details>
+
+:::
+
+:::danger[Lösung]
+
+<details>
+<summary>Der korrigierte Code</summary>
+
+```js
+let zahlen = [1, 2, 3];
+console.log(zahlen[zahlen.length - 1]);
+```
+
+</details>
+
+:::
+
+---
+
+## Übung 10 – Debugging (Meta-Ebene)
+
+```js
+let x = "10";
+
+if (x > 5) {
+  console.log("größer");
+}
+```
+
+:::tip[Hilfe]
+
+<details>
+<summary>Tipp 1</summary>
+
+Überlegen Sie, welchen Typ die Variable x hat.
+</details>
+
+<details>
+<summary>Tipp 2</summary>
+
+Fragen Sie sich: Was erwartet JavaScript bei einem Vergleich?
+</details>
+
+:::
+
+:::danger[Lösung]
+
+<details>
+<summary>Eine mögliche Lösung</summary>
+
+```js
+let x = 10;
+
+if (x > 5) {
+  console.log("größer");
+}
+```
+
+</details>
+
+:::
