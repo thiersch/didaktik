@@ -1,0 +1,264 @@
+---
+title: PHP
+---
+
+# PHP-Grundlagen
+Lernende bearbeiten Logik- und Syntaxaufgaben in PHP, um die serverseitige Logik für den Skitag zu entwickeln. Du begleitest den Lernprozess und unterstützt mit Micro-Scaffolding bei typischen PHP-Stolperfallen.
+
+## Aufgabe: Hilfsfragen formulieren
+Finde passende unterstützende Fragen nach den Regeln des Micro-Scaffolding für die folgenden Situationen beim Erlernen von PHP.
+Gehe dabei wie folgt vor:
+
+1. Analysiere den Fehler im Code. Falls nötig, betrachte die Lösung.
+2. Formuliere eine **minimale** Hilfsfrage. Schreibe sie auf die <span style={{color: '#86aea6', fontWeight: 'bold'}}>grüne Karte</span>.
+3. Formuliere eine **stärkere** Hilfsfrage. Schreibe sie auf die <span style={{color: '#e9c169', fontWeight: 'bold'}}>orangefarbene Karte</span>.
+
+### Beispiel-Situation
+
+```php
+<?php
+$skifahrer = 10;
+echo $Skifahrer;
+```
+
+:::tip[Scaffold]
+
+<details style={{ backgroundColor: '#32965D40'}}>
+
+<summary>Tipp 1</summary>
+
+Vergleichen Sie die Bezeichner (Namen nach dem $-Zeichen) in der Definition und in der Ausgabe ganz genau.
+
+</details>
+
+<details style={{ backgroundColor: '#FF9F1C40'}}>
+
+<summary>Tipp 2</summary>
+
+In PHP wird bei Variablennamen strikt zwischen Groß- und Kleinschreibung unterschieden.
+
+</details>
+:::
+
+:::danger[Lösung]
+<details>
+<summary>Der korrigierte Code</summary>
+
+```php {3}
+<?php
+$skifahrer = 10;
+echo $skifahrer;
+```
+
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Variablennamen unterschiedlich.</span> <a href="https://www.w3schools.com/php/php_variables.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
+</details>
+:::
+
+---
+
+### Situation 1
+
+```php
+<?php
+$skigebiet;
+echo $skigebiet;
+```
+
+<details>
+<summary>Der korrigierte Code</summary>
+
+```php {2}
+<?php
+$skigebiet = "Feldberg";
+echo $skigebiet;
+```
+
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Zuweisung fehlte.</span> <a href="https://www.w3schools.com/php/php_variables.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
+</details>
+
+---
+
+### Situation 2
+
+```php
+<?php
+$preis = "45";
+$waehrung = " Euro";
+echo $preis + $waehrung;
+```
+
+<details>
+<summary>Der korrigierte Code</summary>
+
+```php {4}
+<?php
+$preis = "45";
+$waehrung = " Euro";
+echo $preis . $waehrung;
+```
+
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Punkt (.) statt Plus (+) für Verkettung.</span> <a href="https://www.w3schools.com/php/php_operators.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
+</details>
+
+---
+
+### Situation 3
+
+```php
+<?php
+$temperatur = -5;
+
+if ($temperatur = 0) {
+  echo "Frostgrenze";
+}
+```
+
+<details>
+<summary>Der korrigierte Code</summary>
+
+```php {4}
+<?php
+$temperatur = -5;
+
+if ($temperatur == 0) {
+  echo "Frostgrenze";
+}
+```
+
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Zuweisung (=) statt Vergleich (==).</span> <a href="https://www.w3schools.com/php/php_if_else.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
+</details>
+
+---
+
+### Situation 4
+
+```php
+<?php
+$uebrigeLiftplaetze = 4;
+
+while ($uebrigeLiftplaetze > 0) {
+  echo "Es sind noch Plätze frei";
+}
+```
+
+<details>
+<summary>Der korrigierte Code</summary>
+
+```php {6}
+<?php
+$uebrigeLiftplaetze = 4;
+
+while ($uebrigeLiftplaetze > 0) {
+  echo "Es sind noch Plätze frei";
+  $uebrigeLiftplaetze--; 
+}
+```
+
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Schleifenvariable unverändert.</span> <a href="https://www.w3schools.com/php/php_loop_while.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
+</details>
+
+---
+
+### Situation 5
+Max flucht, weil sein Programm nichts ausgibt. Formuliere sinnvolle Hilfsfragen.
+
+```php
+<?php
+function macheAnkuendigung() {
+  echo "Der Bus fährt jetzt ab!";
+}
+```
+
+<details>
+<summary>Der korrigierte Code</summary>
+
+```php {6}
+<?php
+function macheAnkuendigung() {
+  echo "Der Bus fährt jetzt ab!";
+}
+
+macheAnkuendigung();
+```
+
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Funktionsaufruf fehlt.</span> <a href="https://www.w3schools.com/php/php_functions.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
+</details>
+
+---
+
+### Situation 6
+Elif wundert sich, dass ihr Programm nichts ausgibt. Formuliere sinnvolle Hilfsfragen.
+
+```php
+<?php
+function berechneGesamtpreis($ticket, $verleih) {
+  $ticket + $verleih;
+}
+
+echo berechneGesamtpreis(40, 20);
+```
+
+<details>
+<summary>Der korrigierte Code</summary>
+
+```php {3}
+<?php
+function berechneGesamtpreis($ticket, $verleih) {
+  return $ticket + $verleih;
+}
+
+echo berechneGesamtpreis(40, 20);
+```
+
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Rückgabe fehlt.</span> <a href="https://www.w3schools.com/php/php_functions.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
+</details>
+
+---
+
+### Situation 7
+Hussein ruft dich, weil die Konsole einen Fehler ausgibt, wenn er auf den Helm zugreifen will. Formuliere sinnvolle Hilsfragen.
+
+```php
+<?php
+$ausruestung = ["Ski", "Stöcke", "Helm"];
+
+echo $ausruestung[3];
+```
+
+<details>
+<summary>Der korrigierte Code</summary>
+
+```php {4}
+<?php
+$ausruestung = ["Ski", "Stöcke", "Helm"];
+
+echo $ausruestung[2];
+```
+
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Index falsch.</span> <a href="https://www.w3schools.com/php/php_arrays.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
+</details>
+
+---
+
+### Situation 8
+Lara fragt, warum das Programm einen Fehler meldet, wenn sie den letzten Teilnehmer ausgeben will. Formuliere sinnvolle Hilsfragen statt direkt zu antworten.
+
+```php
+<?php
+$teilnehmer = ["Serhij", "Lara", "Tim"];
+
+echo $teilnehmer[count($teilnehmer)];
+```
+
+<details>
+<summary>Der korrigierte Code</summary>
+
+```php {4}
+<?php
+$teilnehmer = ["Serhij", "Lara", "Tim"];
+
+echo $teilnehmer[count($teilnehmer) - 1];
+```
+
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>count nicht dekrementiert.</span> <a href="https://www.w3schools.com/php/php_arrays.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
+</details>

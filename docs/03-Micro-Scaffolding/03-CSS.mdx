@@ -2,3 +2,220 @@
 title: CSS
 ---
 
+# CSS-Grundlagen
+Lernende gestalten eine Webseite für die Organisation des Skitags mit CSS. Du begleitest den Lernprozess und unterstützt mit Micro-Scaffolding bei typischen Styling-Fehlern.
+
+## Aufgabe: Hilfsfragen formulieren
+Finde passende unterstützende Fragen nach den Regeln des Micro-Scaffolding für die folgenden Situationen beim Erlernen von CSS.
+Gehe dabei wie folgt vor:
+
+1. Analysiere den Fehler im Code. Falls nötig, betrachte die Lösung.
+2. Formuliere eine **minimale** Hilfsfrage. Schreibe sie auf die <span style={{color: '#86aea6', fontWeight: 'bold'}}>grüne Karte</span>.
+3. Formuliere eine **stärkere** Hilfsfrage. Schreibe sie auf die <span style={{color: '#e9c169', fontWeight: 'bold'}}>orangefarbene Karte</span>.
+
+### Beispiel-Situation
+
+```css
+p {
+  color: red
+  font-size: 16px;
+}
+```
+
+:::tip[Scaffold]
+
+<details style={{ backgroundColor: '#32965D40'}}>
+
+<summary>Tipp 1</summary>
+
+Wenn Sie mit Abstand die Struktur betrachten, fällt Ihnen etwas auf?
+
+</details>
+
+<details style={{ backgroundColor: '#FF9F1C40'}}>
+
+<summary>Tipp 2</summary>
+
+Woher "weiß" der Browser, dass eine CSS-Regel zu Ende ist?
+
+</details>
+:::
+
+:::danger[Lösung]
+<details>
+<summary>Der korrigierte Code</summary>
+
+```css {2}
+p {
+  color: red;
+  font-size: 16px;
+}
+```
+
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Fehlendes Semikolon.</span> <a href="https://www.w3schools.com/css/css_syntax.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
+</details>
+
+:::
+
+---
+
+### Situation 2
+
+```css
+img {
+  width: 400;
+}
+```
+
+<details>
+<summary>Der korrigierte Code</summary>
+
+```css {2}
+img {
+  width: 400px;
+}
+```
+
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Fehlende Maßeinheit.</span> <a href="https://www.w3schools.com/css/css_units.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
+</details>
+
+---
+
+### Situation 3
+
+```css
+h1 {
+  color: blue;
+}
+
+anmeldung {
+  color: green;
+}
+```
+
+<details>
+<summary>Der korrigierte Code</summary>
+
+```css {5}
+h1 {
+  color: blue;
+}
+
+.anmeldung {
+  color: green;
+}
+```
+
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Fehlendes Punkt-Präfix für Klassenselektor.</span> <a href="https://www.w3schools.com/css/css_selectors.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
+</details>
+
+---
+
+### Situation 4:
+
+```css
+h3 {
+  font-color: #32965D;
+}
+```
+
+<details>
+<summary>Der korrigierte Code</summary>
+
+```css {2}
+h3 {
+  color: #32965D;
+}
+```
+
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>```font-color``` statt ```color```.</span> <a href="https://www.w3schools.com/cssref/pr_text_color.php" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
+</details>
+
+---
+
+### Situation 5
+Hannes flucht, weil der Abstand innerhalb des Buttons nicht, wie gewünscht, größer wird. Finde konstruktive Hilfsfragen.
+```css
+button {
+  margin: 20px;
+}
+```
+
+<details>
+<summary>Der korrigierte Code</summary>
+
+```css {2}
+button {
+  padding: 20px;
+}
+```
+
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>```margin``` statt ```padding```.</span> <a href="https://www.w3schools.com/css/css_boxmodel.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
+</details>
+
+---
+
+### Situation 6
+Lara wundert sich laut, warum der Text grün statt blau oder rot dargestellt wird. Finde konstruktive Hilfsfragen.
+
+```css
+p { color: blue; }
+.red-text { color: red; }
+```
+
+```html
+<p class="red-text" style="color: green;">Text</p>
+```
+
+<details>
+<summary>Lösung</summary>
+
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Vorrang-Reihenfolge: Inline-Style (style="") > Klassen-Selektor > Element-Selektor.</span> <a href="https://www.w3schools.com/css/css_specificity.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
+</details>
+
+---
+
+### Situation 7
+Sehij ruft dich, weil sein Button nicht wie gewünscht horizontal zentriert ist. Finde konstruktive Hilfsfragen.
+
+```css
+.container {
+  display: flex;
+  align-items: center;
+}
+```
+
+<details>
+<summary>Der korrigierte Code</summary>
+
+```css {3}
+.container {
+  display: flex;
+  justify-content: center;
+}
+```
+
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>align-items (vertikal) statt justify-content (horizontal), .</span> <a href="https://www.w3schools.com/css/css3_flexbox.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
+</details>
+
+---
+
+### Situation 8
+
+```css
+body {
+  background-image: "snow.jpg";
+}
+```
+
+<details>
+<summary>Der korrigierte Code</summary>
+
+```css {2}
+body {
+  background-image: url("snow.jpg");
+}
+```
+
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Fehlende url()-Funktion.</span> <a href="https://www.w3schools.com/cssref/pr_background-image.php" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
+</details>

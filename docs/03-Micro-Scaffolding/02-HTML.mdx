@@ -3,30 +3,37 @@ title: HTML
 ---
 
 # HTML-Grundlagen
+Lernende beschäftigen sich mit HTML als Grundlage von Webentwicklung. Sie zeichnen Inhalte einer Website zur Organisation des Skitags aus. Du begleitest den Lernprozess und unterstützt mit Micro-Scaffolding.
 
-1. Finde den Fehler im Code.
-2. Formuliere eine minimale Hilfestellung.
-3. Formuliere eine stärkere Hilfestellung.
+## Aufgabe: Hilfsfragen formulieren
+Finde passende unterstützende Fragen nach den Regeln des Micro-Scaffolding für die folgenden Situationen beim Erlernen von Webentwicklung.
+Gehe dabei wie folgt vor:
 
-## Beispiel
+1. Analysiere den Fehler im Code. Falls nötig, betrachte die Lösung.
+2. Formuliere eine **minimale** Hilfsfrage. Schreibe sie auf die <span style={{color: '#86aea6', fontWeight: 'bold'}}>grüne Karte</span>.
+3. Formuliere eine **stärkere** Hilfsfrage. Schreibe sie auf die <span style={{color: '#e9c169', fontWeight: 'bold'}}>orangefarbene Karte</span>.
+
+### Beispiel-Situation
 
 ```html {}
 <html lang="de">
 </htlm>
 ```
 
-:::tip[Hilfe]
+:::tip[Scaffold]
 
-<details>
+<details style={{ backgroundColor: '#32965D40'}}>
 <summary>Tipp 1</summary>
 
-Haben Sie alle geöffneten Tags wieder korrekt geschlossen?
+Haben Sie alle geöffneten Tags korrekt geschlossen?
 </details>
 
-<details>
+<details style={{ backgroundColor: '#FF9F1C40'}}>
+
 <summary>Tipp 2</summary>
 
-Ein schließendes Tag muss exakt so heißen wie das öffnende Tag, abgesehen vom `/` davor. Ist das in Ihrem Code so?
+Haben Sie alle Tag-Namen korrekt geschrieben?
+
 </details>
 
 :::
@@ -41,6 +48,8 @@ Ein schließendes Tag muss exakt so heißen wie das öffnende Tag, abgesehen vom
 </html>
 ```
 
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Buchstabendreher im schließenden HTML-Tag.</span> <a href="https://www.w3schools.com/html/html_elements.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
+
 </details>
 
 :::
@@ -48,505 +57,209 @@ Ein schließendes Tag muss exakt so heißen wie das öffnende Tag, abgesehen vom
 
 ---
 
-## Übung 1
+### Situation 1
+
+```html
+<h1>Anmeldung Skitag
+<p>Melde dich am besten direkt an!</p>
+```
+
+<details>
+<summary>Der korrigierte Code</summary>
+
+```html {1}
+<h1>Anmeldung Skitag</h1>
+<p>Melde dich am besten direkt an!</p>
+```
+
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>h1 wurde nicht geschlossen.</span> <a href="https://www.w3schools.com/html/html_elements.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
+
+</details>
+
+---
+
+### Situation 2
 
 ```html
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <titel>Skitag<titel>
-  </head>
+   <head>
+     <titel>Skitag</titel>
+   </head>
 ```
 
-:::danger[Lösung]
 <details>
-  <summary>Der korrigierte Code</summary>
+   <summary>Der korrigierte Code</summary>
 
 ```html {4}
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <title>Skitag<title>
-  </head>
+   <head>
+     <title>Skitag</title>
+   </head>
 ```
+
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>title wurde falsch geschrieben.</span> <a href="https://www.w3schools.com/tags/tag_title.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
 
 </details>
 
-:::
 
 ---
 
-## Übung 2
+### Situation 3
 
 ```html
-<h1>Willkommen
-<p>Das ist meine erste Seite.</p>
+<!DOCTYPE html>
+<html> lang="de"
+   <head>
+     <titel>Skitag</titel>
+   </head>
 ```
 
-:::tip[Hilfe]
-
 <details>
-<summary>Tipp 1</summary>
+   <summary>Der korrigierte Code</summary>
 
-Schauen Sie sich an, welche Tags Sie geöffnet haben.
+```html {2}
+<!DOCTYPE html>
+<html lang="de">
+   <head>
+     <title>Skitag</title>
+   </head>
+```
+
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Attribut lang außerhalb des html-Tags.</span> <a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
+
 </details>
 
-<details>
-<summary>Tipp 2</summary>
+---
 
-Jedes HTML-Element, das geöffnet wird, braucht in der Regel auch ein passendes schließendes Tag.
-</details>
+### Situation 4
 
-:::
 
-:::danger[Lösung]
+```html
+<h1>Anmeldung Skitag<h1>
+Melde dich am besten direkt an!
+<p></p>
+Alles was du brauchst findest du im Folgenden.
+```
 
 <details>
 <summary>Der korrigierte Code</summary>
 
-```html
-<h1>Willkommen</h1>
-<p>Das ist meine erste Seite.</p>
+```html {2,3}
+<h1>Anmeldung Skitag</h1>
+<p>Melde dich am besten direkt an!</p>
+<p>Alles was du brauchst findest du im Folgenden.</p>
 ```
 
-</details>
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Falsche Verwendung des p-Tags.</span> <a href="https://www.w3schools.com/html/html_paragraphs.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
 
-:::
+</details>
 
 ---
 
-## Übung 3
+### Situation 5
 
 ```html
-<a src="https://www.wikipedia.org">Wikipedia</a>
+<img scr="mountains.jpg" alt="Verschneite Berge">
 ```
 
-:::tip[Hilfe]
-
 <details>
-<summary>Tipp 1</summary>
-
-Überlegen Sie, welches Attribut angibt, wohin ein Link führt.
-</details>
-
-<details>
-<summary>Tipp 2</summary>
-
-Das Attribut, das Sie hier verwenden, gehört normalerweise zu einem anderen HTML-Element.
-</details>
-
-:::
-
-:::danger[Lösung]
-
-<details>
-<summary>Der korrigierte Code</summary>
+   <summary>Der korrigierte Code</summary>
 
 ```html
-<a href="https://www.wikipedia.org">Wikipedia</a>
+<img src="mountains.jpg" alt="Verschneite Berge">
 ```
 
-</details>
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Falsch geschriebenes Attribut src.</span> <a href="https://www.w3schools.com/html/html_images.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
 
-:::
+
+</details>
 
 ---
 
-## Übung 4
+### Situation 6
 
 ```html
-<img>bild.jpg</img>
-```
-
-:::tip[Hilfe]
-
-<details>
-<summary>Tipp 1</summary>
-
-Nicht alle HTML-Elemente haben einen Inhalt zwischen Öffnen und Schließen.
-</details>
-
-<details>
-<summary>Tipp 2</summary>
-
-Ein Bild benötigt kein schließendes Tag, sondern nur eine Angabe, wo die Bilddatei liegt.
-</details>
-
-:::
-
-:::danger[Lösung]
-
-<details>
-<summary>Der korrigierte Code</summary>
-
-```html
-<img src="bild.jpg">
-```
-
-</details>
-
-:::
-
----
-
-## Übung 5
-
-```html
+<h3>Checkliste</h3>
 <ul>
-  <li>Apfel</li>
-  <li>Banane</li>
-```
-
-:::tip[Hilfe]
-
-<details>
-<summary>Tipp 1</summary>
-
-Welche HTML-Elemente gehören immer paarweise zusammen?
-</details>
-
-<details>
-<summary>Tipp 2</summary>
-
-Überprüfen Sie, ob alle Listen-Tags korrekt geöffnet und geschlossen wurden.
-</details>
-
-:::
-
-:::danger[Lösung]
-
-<details>
-<summary>Der korrigierte Code</summary>
-
-```html
-<ul>
-  <li>Apfel</li>
-  <li>Banane</li>
+   <li>Ski</li>
+   <li>Helm</li>
+   <li>Rucksack</li>
+   <ul>
+     <li>Sonnencreme</li>
+     <li>Ausweis</li>
+     <li>Vesper</li>
+     <li>Getränke</li>
+   </ul>
 </ul>
 ```
 
-</details>
+<details>
+   <summary>Der korrigierte Code</summary>
 
-:::
+```html {5,12}
+<h3>Checkliste</h3>
+<ul>
+   <li>Ski</li>
+   <li>Helm</li>
+   <li>Rucksack
+   <ul>
+     <li>Sonnencreme</li>
+     <li>Ausweis</li>
+     <li>Vesper</li>
+     <li>Getränke</li>
+   </ul>
+   </li>
+</ul>
+```
+
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Innere Liste nicht in Listenelement li der äußeren Liste.</span> <a href="https://stackoverflow.com/questions/5899337/proper-way-to-make-html-nested-list" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
+
+</details>
 
 ---
 
-## Übung 6
+### Situation 7
 
 ```html
-<img src="Bild.JPG">
+<a "https://www.bergfex.at">Hier gehts zum Pistenplan</a>
 ```
 
-:::tip[Hilfe]
-
 <details>
-<summary>Tipp 1</summary>
-
-Vergleichen Sie den Dateinamen im Code mit dem tatsächlichen Dateinamen.
-</details>
-
-<details>
-<summary>Tipp 2</summary>
-
-HTML unterscheidet zwischen Groß- und Kleinschreibung bei Dateinamen.
-</details>
-
-:::
-
-:::danger[Lösung]
-
-<details>
-<summary>Der korrigierte Code</summary>
+   <summary>Der korrigierte Code</summary>
 
 ```html
-<img src="bild.jpg">
+<a href="https://www.bergfex.at">Hier gehts zum Pistenplan</a>
 ```
 
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>URL ohne Attribut verwendet.</span> <a href="https://www.w3schools.com/html/html_links.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
+
 </details>
-
-:::
-
 
 ---
 
-## Übung 7 – Falsch geschriebener Tag
+### Situation 8
 
 ```html
-<p>Das ist ein Absatz</pp>
-```
-
-:::tip[Hilfe]
-
-<details>
-<summary>Tipp 1</summary>
-
-Vergleichen Sie den öffnenden und den schließenden Tag.
-</details>
-
-<details>
-<summary>Tipp 2</summary>
-
-Der Name des schließenden Tags muss exakt dem öffnenden entsprechen.
-</details>
-
-:::
-
-:::danger[Lösung]
-
-<details>
-<summary>Der korrigierte Code</summary>
-
-```html
-<p>Das ist ein Absatz</p>
-```
-
-</details>
-
-:::
-
----
-
-## Übung 8 – Verschachtelung von Elementen
-
-```html
-<p>Das ist <strong>wichtig</p></strong>
-```
-
-:::tip[Hilfe]
-
-<details>
-<summary>Tipp 1</summary>
-
-Achten Sie auf die Reihenfolge, in der Tags geöffnet und geschlossen werden.
-</details>
-
-<details>
-<summary>Tipp 2</summary>
-
-HTML-Tags müssen wie Klammern korrekt ineinander verschachtelt sein.
-</details>
-
-:::
-
-:::danger[Lösung]
-
-<details>
-<summary>Der korrigierte Code</summary>
-
-```html
-<p>Das ist <strong>wichtig</strong></p>
-```
-
-</details>
-
-:::
-
----
-
-## Übung 9 – Fehlendes Attribut bei Bildern
-
-```html
-<img alt="Ein Foto">
-```
-
-:::tip[Hilfe]
-
-<details>
-<summary>Tipp 1</summary>
-
-Ein Bild braucht eine Angabe, wo die Datei liegt.
-</details>
-
-<details>
-<summary>Tipp 2</summary>
-
-Überlegen Sie, welches Attribut die Quelle eines Bildes beschreibt.
-</details>
-
-:::
-
-:::danger[Lösung]
-
-<details>
-<summary>Der korrigierte Code</summary>
-
-```html
-<img src="foto.jpg" alt="Ein Foto">
-```
-
-</details>
-
-:::
-
----
-
-## Übung 10 – Link ohne sichtbaren Text
-
-```html
-<a href="https://example.com"></a>
-```
-
-:::tip[Hilfe]
-
-<details>
-<summary>Tipp 1</summary>
-
-Überlegen Sie, was Nutzerinnen und Nutzer anklicken sollen.
-</details>
-
-<details>
-<summary>Tipp 2</summary>
-
-Ein Link braucht einen sichtbaren Inhalt zwischen den Tags.
-</details>
-
-:::
-
-:::danger[Lösung]
-
-<details>
-<summary>Der korrigierte Code</summary>
-
-```html
-<a href="https://example.com">Zur Beispielseite</a>
-```
-
-</details>
-
-:::
-
----
-
-## Übung 11 – Formular: fehlendes Attribut
-
-```html
-<form>
-  <input type="text">
+<!--- Code ist innerhalb eines Formulars --->
+   <label>Name:</label>
+   <input name="username">
+   <button type="submit">Anmelden</button>
 </form>
 ```
 
-:::tip[Hilfe]
-
 <details>
-<summary>Tipp 1</summary>
+   <summary>Der korrigierte Code</summary>
 
-Formulare senden Daten mit Namen.
-</details>
-
-<details>
-<summary>Tipp 2</summary>
-
-Überlegen Sie, welches Attribut dem Eingabefeld einen Schlüssel gibt.
-</details>
-
-:::
-
-:::danger[Lösung]
-
-<details>
-<summary>Der korrigierte Code</summary>
-
-```html
-<form>
-  <input type="text" name="username">
+```html {2-3}
+<!--- Code ist innerhalb eines Formulars --->
+   <label for="user">Name:</label>
+   <input id="user" name="username">
+   <button type="submit">Anmelden</button>
 </form>
 ```
 
-</details>
-
-:::
-
----
-
-## Übung 12 – Formular: Label und Input
-
-```html
-<label>Name</label>
-<input type="text" id="name">
-```
-
-:::tip[Hilfe]
-
-<details>
-<summary>Tipp 1</summary>
-
-Labels sind mit Eingabefeldern verknüpft.
-</details>
-
-<details>
-<summary>Tipp 2</summary>
-
-Überlegen Sie, welches Attribut beim Label auf das Input verweist.
-</details>
-
-:::
-
-:::danger[Lösung]
-
-<details>
-<summary>Der korrigierte Code</summary>
-
-```html
-<label for="name">Name</label>
-<input type="text" id="name">
-```
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Fehlende Verknüpfung (for / id).</span> <a href="https://www.w3schools.com/tags/tag_label.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
 
 </details>
-
-:::
-
----
-
-## Übung 13 – Formular: Button-Typ
-
-```html
-<form>
-  <button>Senden</button>
-</form>
-```
-
-:::tip[Hilfe]
-
-<details>
-<summary>Tipp 1</summary>
-
-Buttons haben unterschiedliche Aufgaben.
-</details>
-
-<details>
-<summary>Tipp 2</summary>
-
-Überlegen Sie, welcher Typ ein Formular abschickt.
-</details>
-
-:::
-
-:::danger[Lösung]
-
-<details>
-<summary>Der korrigierte Code</summary>
-
-```html
-<form>
-  <button type="submit">Senden</button>
-</form>
-```
-
-</details>
-
-:::
-
-<details>
-  <summary>Übung: Netzwerk-Typ zuordnen</summary>
-
-<ItemMatch taskData={[
-  { id: 'home', text: 'Dein Heimnetzwerk mit Laptop, Smartphone und Drucker.', answer: 'LAN' },
-  { id: 'bluetooth', text: 'Ein Bluetooth-Headset, das mit deinem Handy verbunden ist.', answer: 'PAN' },
-  { id: 'internet', text: 'Das Internet, das Länder und Kontinente verbindet.', answer: 'WAN' },
-  { id: 'uni', text: 'Das Netzwerk, das die verschiedenen Campus-Gebäude der Universität verbindet.', answer: 'MAN' },
-  { id: 'multicorp', text: 'Das Netzwerk eines Konzerns mit Niederlassungen in New York, London und Tokio.', answer: 'GAN' },
-]} />
-
-</details>
-
----

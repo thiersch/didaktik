@@ -2,429 +2,246 @@
 title: JavaScript
 ---
 
-# JavaScript
+# JavaScript-Grundlagen
+Lernende bearbeiten Logik- und Syntaxaufgaben in JavaScript, um die Webseite für den Skitag interaktiv zu gestalten. Du begleitest den Lernprozess und unterstützt mit Micro-Scaffolding bei typischen Stolperfallen.
 
-Die folgenden Übungen sind für JavaScript in der Konsole gedacht  
-(z. B. Browser-Konsole oder Node.js).  
-Es sind keine HTML- oder CSS-Kenntnisse erforderlich.
+## Aufgabe: Hilfsfragen formulieren
+Finde passende unterstützende Fragen nach den Regeln des Micro-Scaffolding für die folgenden Situationen beim Erlernen von JavaScript.
+Gehe dabei wie folgt vor:
 
----
+1. Analysiere den Fehler im Code. Falls nötig, betrachte die Lösung.
+2. Formuliere eine **minimale** Hilfsfrage. Schreibe sie auf die <span style={{color: '#86aea6', fontWeight: 'bold'}}>grüne Karte</span>.
+3. Formuliere eine **stärkere** Hilfsfrage. Schreibe sie auf die <span style={{color: '#e9c169', fontWeight: 'bold'}}>orangefarbene Karte</span>.
 
-## Übung 1 – Groß- und Kleinschreibung
+### Beispiel-Situation
 
 ```js
-let punkte = 10;
-console.log(Punkte);
+let skifahrer = 10;
+console.log(Skifahrer);
 ```
 
-:::tip[Hilfe]
+:::tip[Scaffold]
 
-<details>
+<details style={{ backgroundColor: '#32965D40'}}>
+
 <summary>Tipp 1</summary>
 
-Vergleichen Sie die beiden Bezeichner genau.
+Vergleichen Sie die Bezeichner (Namen) in der Definition und in der Ausgabe ganz genau.
+
 </details>
 
-<details>
+<details style={{ backgroundColor: '#FF9F1C40'}}>
+
 <summary>Tipp 2</summary>
 
-JavaScript unterscheidet zwischen Groß- und Kleinschreibung bei Variablennamen.
+JavaScript unterscheidet strikt zwischen Groß- und Kleinschreibung (Case Sensitivity).
+
 </details>
 
 :::
 
 :::danger[Lösung]
+<details>
+<summary>Der korrigierte Code</summary>
+
+```js {2}
+let skifahrer = 10;
+console.log(skifahrer);
+```
+
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Variablennamen unterschiedlich.</span> <a href="https://www.w3schools.com/js/js_variables.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
+</details>
+:::
+
+---
+
+### Situation 1
+
+```js
+let skigebiet;
+console.log(skigebiet);
+```
 
 <details>
 <summary>Der korrigierte Code</summary>
 
-```js
-let punkte = 10;
-console.log(punkte);
+```js {1}
+let skigebiet = "Feldberg";
+console.log(skigebiet);
 ```
 
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Zuweisung fehlte (bei JavaScript haben solche Variablen den Wert "undefined").</span> <a href="https://www.w3schools.com/jsref/jsref_undefined.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
 </details>
-
-:::
 
 ---
 
-## Übung 2 – Variable ohne Wert
+### Situation 2
 
 ```js
-let name;
-console.log(name);
+let preis = "45";
+let leihgebuehr = 15;
+console.log(preis + leihgebuehr);
 ```
-
-:::tip[Hilfe]
-
-<details>
-<summary>Tipp 1</summary>
-
-Überlegen Sie, wann eine Variable einen Wert bekommt.
-</details>
-
-<details>
-<summary>Tipp 2</summary>
-
-Eine Variable ist erst dann nutzbar, wenn ihr ein Wert zugewiesen wurde.
-</details>
-
-:::
-
-:::danger[Lösung]
-
-<details>
-<summary>Eine mögliche Lösung</summary>
-
-```js
-let name = "Alex";
-console.log(name);
-```
-
-</details>
-
-:::
-
----
-
-## Übung 3 – Zahl oder Text?
-
-```js
-let a = "5";
-let b = 3;
-console.log(a + b);
-```
-
-:::tip[Hilfe]
-
-<details>
-<summary>Tipp 1</summary>
-
-Überlegen Sie, welchen Typ die beiden Werte haben.
-</details>
-
-<details>
-<summary>Tipp 2</summary>
-
-Der Plus-Operator verhält sich bei Text anders als bei Zahlen.
-</details>
-
-:::
-
-:::danger[Lösung]
-
-<details>
-<summary>Eine mögliche Lösung</summary>
-
-```js
-let a = 5;
-let b = 3;
-console.log(a + b);
-```
-
-</details>
-
-:::
-
----
-
-## Übung 4 – Vergleich oder Zuweisung
-
-```js
-let x = 5;
-
-if (x = 10) {
-  console.log("Treffer");
-}
-```
-
-:::tip[Hilfe]
-
-<details>
-<summary>Tipp 1</summary>
-
-Achten Sie auf die Anzahl der Gleichheitszeichen.
-</details>
-
-<details>
-<summary>Tipp 2</summary>
-
-Ein Gleichheitszeichen weist zu, zwei oder drei vergleichen.
-</details>
-
-:::
-
-:::danger[Lösung]
 
 <details>
 <summary>Der korrigierte Code</summary>
 
-```js
-let x = 5;
-
-if (x === 10) {
-  console.log("Treffer");
-}
+```js {1}
+let preis = 45;
+let leihgebuehr = 15;
+console.log(preis + leihgebuehr);
 ```
 
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Unterschiedliche Datentypen, führt hier zur Textverkettung ("4515").</span> <a href="https://www.w3schools.com/js/js_type_conversion.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
 </details>
-
-:::
 
 ---
 
-## Übung 5 – Endlosschleife
+### Situation 3
 
 ```js
-let i = 0;
+let temperatur = -5;
 
-while (i < 5) {
-  console.log(i);
+if (temperatur = 0) {
+  console.log("Frostgrenze");
 }
 ```
-
-:::tip[Hilfe]
-
-<details>
-<summary>Tipp 1</summary>
-
-Überlegen Sie, warum die Bedingung immer wahr bleibt.
-</details>
-
-<details>
-<summary>Tipp 2</summary>
-
-Der Schleifenwert muss sich bei jedem Durchlauf verändern.
-</details>
-
-:::
-
-:::danger[Lösung]
 
 <details>
 <summary>Der korrigierte Code</summary>
 
-```js
-let i = 0;
+```js {3}
+let temperatur = -5;
 
-while (i < 5) {
-  console.log(i);
-  i++;
+if (temperatur === 0) {
+  console.log("Frostgrenze");
 }
 ```
 
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Zuweisung (=) statt Vergleich (==, ===).</span> <a href="https://www.w3schools.com/js/js_comparisons.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
 </details>
-
-:::
 
 ---
 
-## Übung 6 – Funktion wird nicht ausgeführt
+### Situation 4
 
 ```js
-function sagHallo() {
-  console.log("Hallo");
+let uebrigeLiftplaetze = 4;
+
+while (liftPlatz > 0) {
+  console.log("Es sind noch Plätze frei");
 }
 ```
-
-:::tip[Hilfe]
-
-<details>
-<summary>Tipp 1</summary>
-
-Eine Funktion zu definieren ist nicht dasselbe wie sie zu benutzen.
-</details>
-
-<details>
-<summary>Tipp 2</summary>
-
-Überlegen Sie, wie eine Funktion aufgerufen wird.
-</details>
-
-:::
-
-:::danger[Lösung]
-
-<details>
-<summary>Eine mögliche Lösung</summary>
-
-```js
-function sagHallo() {
-  console.log("Hallo");
-}
-
-sagHallo();
-```
-
-</details>
-
-:::
-
----
-
-## Übung 7 – Fehlender Rückgabewert
-
-```js
-function addiere(a, b) {
-  a + b;
-}
-
-console.log(addiere(2, 3));
-```
-
-:::tip[Hilfe]
-
-<details>
-<summary>Tipp 1</summary>
-
-Überlegen Sie, was mit dem Ergebnis der Rechnung passiert.
-</details>
-
-<details>
-<summary>Tipp 2</summary>
-
-Funktionen geben nur dann etwas zurück, wenn sie dazu aufgefordert werden.
-</details>
-
-:::
-
-:::danger[Lösung]
 
 <details>
 <summary>Der korrigierte Code</summary>
 
-```js
-function addiere(a, b) {
-  return a + b;
+```js {5}
+let uebrigeLiftplaetze = 4;
+
+while (uebrigeLiftplaetze > 0) {
+  console.log("Es sind noch Plätze frei");
+  uebrigeLiftplaetze = uebrigeLiftplaetze - 1;
 }
-
-console.log(addiere(2, 3));
 ```
 
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Unveränderte Schleifenvariable.</span> <a href="https://www.w3schools.com/js/js_loop_while.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
 </details>
-
-:::
 
 ---
 
-## Übung 8 – Zugriff auf ein Array
+### Situation 5
+Max flucht, weil sein Programm nichts ausgibt. Formuliere sinnvolle Hilfsfragen.
 
 ```js
-let farben = ["rot", "blau", "grün"];
-console.log(farben[3]);
+function macheAnkündigung() {
+  console.log("Der Bus fährt jetzt ab!");
+}
 ```
-
-:::tip[Hilfe]
-
-<details>
-<summary>Tipp 1</summary>
-
-Überlegen Sie, bei welcher Zahl das Zählen beginnt.
-</details>
-
-<details>
-<summary>Tipp 2</summary>
-
-Das letzte Element hat nicht denselben Index wie die Länge des Arrays.
-</details>
-
-:::
-
-:::danger[Lösung]
-
-<details>
-<summary>Eine mögliche Lösung</summary>
-
-```js
-let farben = ["rot", "blau", "grün"];
-console.log(farben[2]);
-```
-
-</details>
-
-:::
-
----
-
-## Übung 9 – Länge eines Arrays
-
-```js
-let zahlen = [1, 2, 3];
-console.log(zahlen[zahlen.length]);
-```
-
-:::tip[Hilfe]
-
-<details>
-<summary>Tipp 1</summary>
-
-Was sagt length genau aus?
-</details>
-
-<details>
-<summary>Tipp 2</summary>
-
-Der höchste Index ist immer eins kleiner als die Länge.
-</details>
-
-:::
-
-:::danger[Lösung]
 
 <details>
 <summary>Der korrigierte Code</summary>
 
-```js
-let zahlen = [1, 2, 3];
-console.log(zahlen[zahlen.length - 1]);
+```js {5}
+function macheAnkündigung() {
+  console.log("Der Bus fährt jetzt ab!");
+}
+
+macheAnkündigung();
 ```
 
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Funktionsaufruf fehlt.</span> <a href="https://www.w3schools.com/js/js_function_invocation.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
 </details>
-
-:::
 
 ---
 
-## Übung 10 – Debugging (Meta-Ebene)
+### Situation 6
+Elif wundert sich, dass ihr Programm nichts ausgibt. Formuliere sinnvolle Hilfsfragen.
 
 ```js
-let x = "10";
-
-if (x > 5) {
-  console.log("größer");
+function berechneGesamtpreis(ticket, verleih) {
+  ticket + verleih;
 }
+
+console.log(berechneGesamtpreis(40, 20));
 ```
 
-:::tip[Hilfe]
-
 <details>
-<summary>Tipp 1</summary>
+<summary>Der korrigierte Code</summary>
 
-Überlegen Sie, welchen Typ die Variable x hat.
+```js {2}
+function berechneGesamtpreis(ticket, verleih) {
+  return ticket + verleih;
+}
+
+console.log(berechneGesamtpreis(40, 20));
+```
+
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Rückgabe fehlt.</span> <a href="https://www.w3schools.com/js/js_function_return.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
 </details>
 
-<details>
-<summary>Tipp 2</summary>
+---
 
-Fragen Sie sich: Was erwartet JavaScript bei einem Vergleich?
-</details>
-
-:::
-
-:::danger[Lösung]
-
-<details>
-<summary>Eine mögliche Lösung</summary>
+### Situation 7
+Hussein ruft dich, weil die Konsole "undefined" statt "Helm" ausgibt. Formuliere sinnvolle Hilsfragen.
 
 ```js
-let x = 10;
+let ausruestung = ["Ski", "Stöcke", "Helm"];
 
-if (x > 5) {
-  console.log("größer");
-}
+console.log(ausruestung[3]);
 ```
 
+<details>
+<summary>Der korrigierte Code</summary>
+
+```js {3}
+let ausruestung = ["Ski", "Stöcke", "Helm"];
+
+console.log(ausruestung[2]);
+```
+
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Index falsch.</span> <a href="https://www.w3schools.com/js/js_arrays.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
 </details>
 
-:::
+---
+
+### Situation 8
+Lara fragt, warum die Konsole "undefined" statt "Tim" ausgibt. Formuliere sinnvolle Hilsfragen statt direkt zu antworten.
+
+```js
+let teilnehmer = ["Serhij", "Lara", "Tim"];
+
+console.log(teilnehmer[teilnehmer.length]);
+```
+
+<details>
+<summary>Der korrigierte Code</summary>
+
+```js {3}
+let teilnehmer = ["Serhij", "Lara", "Tim"];
+
+console.log(teilnehmer[teilnehmer.length - 1]);
+```
+
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>```length``` nicht dekrementiert.</span> <a href="https://www.w3schools.com/jsref/jsref_length_array.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
+</details>
