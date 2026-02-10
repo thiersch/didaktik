@@ -33,7 +33,7 @@ export default function Home() {
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="Internetworking für alle">
+      description="Didaktik für alle">
       <HomepageHeader />
       <main>
         <HomepageFeatures />

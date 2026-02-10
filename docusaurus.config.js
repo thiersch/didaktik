@@ -20,7 +20,7 @@ const config = {
   },
 
   // Set the production url of your site here
-  url: 'http://thiersch.github.io/',
+  url: 'http://thiersch.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/didaktik/',
@@ -63,20 +63,20 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/didaktik_social_card.jpg',
       navbar: {
         title: 'Didaktik',
         logo: {
           alt: 'Logo',
           src: 'img/logo.png',
         },
-        items: [
-          {
-            href: 'https://www.csfieldguide.org.nz/en/interactives/binary-cards/',
-            label: 'Binary Cards',
-            position: 'right',
-          },
-        ],
+        // items: [
+        //   {
+        //     href: 'https://www.csfieldguide.org.nz/en/interactives/binary-cards/',
+        //     label: 'Binary Cards',
+        //     position: 'right',
+        //   },
+        // ],
       },
       footer: {
         style: 'dark',
