@@ -70,13 +70,13 @@ const config = {
           alt: 'Logo',
           src: 'img/logo.png',
         },
-        // items: [
-        //   {
-        //     href: 'https://www.csfieldguide.org.nz/en/interactives/binary-cards/',
-        //     label: 'Binary Cards',
-        //     position: 'right',
-        //   },
-        // ],
+        items: [
+          {
+            href: 'https://excalidraw.com/#room=16f1e5114ff5791e6529,klAicSL2vXNVksLgChaYvA',
+            label: 'Web-Tafel',
+            position: 'right',
+          },
+        ],
       },
       footer: {
         style: 'dark',
