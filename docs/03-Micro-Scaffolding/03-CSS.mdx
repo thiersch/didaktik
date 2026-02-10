@@ -59,7 +59,7 @@ p {
 
 ---
 
-### Situation 2
+### Situation 1
 
 ```css
 img {
@@ -81,7 +81,7 @@ img {
 
 ---
 
-### Situation 3
+### Situation 2
 
 ```css
 h1 {
@@ -111,7 +111,7 @@ h1 {
 
 ---
 
-### Situation 4:
+### Situation 3
 
 ```css
 h3 {
@@ -133,7 +133,7 @@ h3 {
 
 ---
 
-### Situation 5
+### Situation 4
 Hannes flucht, weil der Abstand innerhalb des Buttons nicht, wie gewünscht, größer wird. Finde konstruktive Hilfsfragen.
 ```css
 button {
@@ -155,7 +155,7 @@ button {
 
 ---
 
-### Situation 6
+### Situation 5
 Lara wundert sich laut, warum der Text grün statt blau oder rot dargestellt wird. Finde konstruktive Hilfsfragen.
 
 ```css
@@ -175,7 +175,7 @@ p { color: blue; }
 
 ---
 
-### Situation 7
+### Situation 6
 Sehij ruft dich, weil sein Button nicht wie gewünscht horizontal zentriert ist. Finde konstruktive Hilfsfragen.
 
 ```css
@@ -195,12 +195,12 @@ Sehij ruft dich, weil sein Button nicht wie gewünscht horizontal zentriert ist.
 }
 ```
 
-<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>align-items (vertikal) statt justify-content (horizontal), .</span> <a href="https://www.w3schools.com/css/css3_flexbox.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>```align-items``` (vertikal) statt ```justify-content``` (horizontal), .</span> <a href="https://www.w3schools.com/css/css3_flexbox.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
 </details>
 
 ---
 
-### Situation 8
+### Situation 7
 
 ```css
 body {
@@ -217,5 +217,37 @@ body {
 }
 ```
 
-<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Fehlende url()-Funktion.</span> <a href="https://www.w3schools.com/cssref/pr_background-image.php" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Fehlende ```url()```-Funktion.</span> <a href="https://www.w3schools.com/cssref/pr_background-image.php" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
+</details>
+
+---
+
+### Situation 8
+
+```css
+.hero-section {
+  width: 100%;
+  height: 100vh;
+  background-image: url("panorama.jpg");
+  background-size: contain;
+}
+```
+
+<details>
+<summary>Der korrigierte Code</summary>
+
+```css {4-5}
+.hero-section {
+  width: 100%;
+  height: 100vh;
+  background-image: url("panorama.jpg");
+  background-size: cover;
+  background-position: center;
+}
+```
+
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> 
+  <span>Problem mit Bildausschnitt: ```cover``` füllt den Viewport besser als ```contain```.</span> 
+  <a href="https://www.w3schools.com/cssref/css3_pr_background-size.php" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> 
+</div>
 </details>
