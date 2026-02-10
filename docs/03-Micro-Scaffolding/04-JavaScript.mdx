@@ -3,7 +3,7 @@ title: JavaScript
 ---
 
 # JavaScript-Grundlagen
-Lernende bearbeiten Logik- und Syntaxaufgaben in JavaScript, um die Webseite für den Skitag interaktiv zu gestalten. Du begleitest den Lernprozess und unterstützt mit Micro-Scaffolding bei typischen Stolperfallen.
+Lernende bearbeiten Logik- und Syntaxaufgaben in JavaScript, um die Webseite für die Organisation einer Radtour interaktiv zu gestalten. Du begleitest den Lernprozess und unterstützt mit Micro-Scaffolding bei typischen Stolperfallen.
 
 ## Aufgabe: Hilfsfragen formulieren
 Finde passende unterstützende Fragen nach den Regeln des Micro-Scaffolding für die folgenden Situationen beim Erlernen von JavaScript.
@@ -16,8 +16,8 @@ Gehe dabei wie folgt vor:
 ### Beispiel-Situation
 
 ```js
-let skifahrer = 10;
-console.log(Skifahrer);
+let fahrradfahrer = 10;
+console.log(Fahrradfahrer);
 ```
 
 :::tip[Scaffold]
@@ -26,7 +26,7 @@ console.log(Skifahrer);
 
 <summary>Tipp 1</summary>
 
-Vergleichen Sie die Bezeichner (Namen) in der Definition und in der Ausgabe ganz genau.
+JavaScript unterscheidet strikt zwischen Groß- und Kleinschreibung (Case Sensitivity).
 
 </details>
 
@@ -34,7 +34,7 @@ Vergleichen Sie die Bezeichner (Namen) in der Definition und in der Ausgabe ganz
 
 <summary>Tipp 2</summary>
 
-JavaScript unterscheidet strikt zwischen Groß- und Kleinschreibung (Case Sensitivity).
+Vergleichen Sie die Bezeichner (Namen) in der Definition und in der Ausgabe ganz genau.
 
 </details>
 
@@ -45,8 +45,8 @@ JavaScript unterscheidet strikt zwischen Groß- und Kleinschreibung (Case Sensit
 <summary>Der korrigierte Code</summary>
 
 ```js {2}
-let skifahrer = 10;
-console.log(skifahrer);
+let fahrradfahrer = 10;
+console.log(fahrradfahrer);
 ```
 
 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Variablennamen unterschiedlich.</span> <a href="https://www.w3schools.com/js/js_variables.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
@@ -55,19 +55,19 @@ console.log(skifahrer);
 
 ---
 
-### Situation 1
+### Situation 1: Zielankunft planen
 
 ```js
-let skigebiet;
-console.log(skigebiet);
+let tourziel;
+console.log(tourziel);
 ```
 
 <details>
 <summary>Der korrigierte Code</summary>
 
 ```js {1}
-let skigebiet = "Feldberg";
-console.log(skigebiet);
+let tourziel = "Bodensee";
+console.log(tourziel);
 ```
 
 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Zuweisung fehlte (bei JavaScript haben solche Variablen den Wert "undefined").</span> <a href="https://www.w3schools.com/jsref/jsref_undefined.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
@@ -75,7 +75,7 @@ console.log(skigebiet);
 
 ---
 
-### Situation 2
+### Situation 2: Kostenberechnung
 
 ```js
 let preis = "45";
@@ -92,18 +92,18 @@ let leihgebuehr = 15;
 console.log(preis + leihgebuehr);
 ```
 
-<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Unterschiedliche Datentypen, führt hier zur Textverkettung ("4515").</span> <a href="https://www.w3schools.com/js/js_type_conversion.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Unterschiedliche Datentypen führen zur Textverkettung ("4515").</span> <a href="https://www.w3schools.com/js/js_type_conversion.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
 </details>
 
 ---
 
-### Situation 3
+### Situation 3: Temperatur-Check
 
 ```js
-let temperatur = -5;
+let temperatur = 0;
 
 if (temperatur = 0) {
-  console.log("Frostgrenze");
+  console.log("Die Temperatur liegt genau am Gefrierpunkt");
 }
 ```
 
@@ -111,10 +111,10 @@ if (temperatur = 0) {
 <summary>Der korrigierte Code</summary>
 
 ```js {3}
-let temperatur = -5;
+let temperatur = 0;
 
-if (temperatur === 0) {
-  console.log("Frostgrenze");
+if (temperatur == 0) { // oder (temperatur === 0)
+  console.log("Die Temperatur liegt genau am Gefrierpunkt");
 }
 ```
 
@@ -123,13 +123,13 @@ if (temperatur === 0) {
 
 ---
 
-### Situation 4
+### Situation 4: Alle verfügbaren Räder leihen
 
 ```js
-let uebrigeLiftplaetze = 4;
+let uebrigeFahrraeder = 8;
 
-while (liftPlatz > 0) {
-  console.log("Es sind noch Plätze frei");
+while (uebrigeFahrraeder > 0) {
+  console.log("Es sind noch Räder im Verleih verfügbar");
 }
 ```
 
@@ -137,25 +137,25 @@ while (liftPlatz > 0) {
 <summary>Der korrigierte Code</summary>
 
 ```js {5}
-let uebrigeLiftplaetze = 4;
+let uebrigeFahrraeder = 8;
 
-while (uebrigeLiftplaetze > 0) {
-  console.log("Es sind noch Plätze frei");
-  uebrigeLiftplaetze = uebrigeLiftplaetze - 1;
+while (uebrigeFahrraeder > 0) {
+  console.log("Es sind noch Räder im Verleih verfügbar");
+  uebrigeFahrraeder = uebrigeFahrraeder - 1; // oder uebrigeFahrraeder--;
 }
 ```
 
-<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Unveränderte Schleifenvariable.</span> <a href="https://www.w3schools.com/js/js_loop_while.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Schleifenvariable nicht verändert (-> Endlosschleife).</span> <a href="https://www.w3schools.com/js/js_loop_while.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
 </details>
 
 ---
 
-### Situation 5
-Max flucht, weil sein Programm nichts ausgibt. Formuliere sinnvolle Hilfsfragen.
+### Situation 5: Start-Signal
+Max wundert sich, warum die Konsole leer bleibt. Formuliere sinnvolle Hilfsfragen.
 
 ```js
-function macheAnkündigung() {
-  console.log("Der Bus fährt jetzt ab!");
+function starteTour() {
+  console.log("Die Radtour beginnt jetzt!");
 }
 ```
 
@@ -163,11 +163,11 @@ function macheAnkündigung() {
 <summary>Der korrigierte Code</summary>
 
 ```js {5}
-function macheAnkündigung() {
-  console.log("Der Bus fährt jetzt ab!");
+function starteTour() {
+  console.log("Die Radtour beginnt jetzt!");
 }
 
-macheAnkündigung();
+starteTour();
 ```
 
 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Funktionsaufruf fehlt.</span> <a href="https://www.w3schools.com/js/js_function_invocation.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
@@ -175,12 +175,12 @@ macheAnkündigung();
 
 ---
 
-### Situation 6
-Elif wundert sich, dass ihr Programm nichts ausgibt. Formuliere sinnvolle Hilfsfragen.
+### Situation 6: Budget-Rechner
+Elif erhält "undefined" als Ergebnis ihrer Preisberechnung. Formuliere sinnvolle Hilfsfragen.
 
 ```js
-function berechneGesamtpreis(ticket, verleih) {
-  ticket + verleih;
+function berechneGesamtpreis(radmiete, verpflegung) {
+  radmiete + verpflegung;
 }
 
 console.log(berechneGesamtpreis(40, 20));
@@ -190,43 +190,43 @@ console.log(berechneGesamtpreis(40, 20));
 <summary>Der korrigierte Code</summary>
 
 ```js {2}
-function berechneGesamtpreis(ticket, verleih) {
-  return ticket + verleih;
+function berechneGesamtpreis(radmiete, verpflegung) {
+  return radmiete + verpflegung;
 }
 
 console.log(berechneGesamtpreis(40, 20));
 ```
 
-<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Rückgabe fehlt.</span> <a href="https://www.w3schools.com/js/js_function_return.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Rückgabe (```return```-Anweisung) fehlt.</span> <a href="https://www.w3schools.com/js/js_function_return.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
 </details>
 
 ---
 
-### Situation 7
-Hussein ruft dich, weil die Konsole "undefined" statt "Helm" ausgibt. Formuliere sinnvolle Hilsfragen.
+### Situation 7: Packliste prüfen
+Hussein möchte "Helm" ausgeben, erhält aber "undefined". Formuliere sinnvolle Hilfsfragen.
 
 ```js
-let ausruestung = ["Ski", "Stöcke", "Helm"];
+let packliste = ["Fahrradschloss", "Luftpumpe", "Helm"];
 
-console.log(ausruestung[3]);
+console.log(packliste[3]);
 ```
 
 <details>
 <summary>Der korrigierte Code</summary>
 
 ```js {3}
-let ausruestung = ["Ski", "Stöcke", "Helm"];
+let packliste = ["Fahrradschloss", "Luftpumpe", "Helm"];
 
-console.log(ausruestung[2]);
+console.log(packliste[2]);
 ```
 
-<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Index falsch.</span> <a href="https://www.w3schools.com/js/js_arrays.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Index außerhalb des Bereichs (Off-by-one error).</span> <a href="https://www.w3schools.com/js/js_arrays.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
 </details>
 
 ---
 
-### Situation 8
-Lara fragt, warum die Konsole "undefined" statt "Tim" ausgibt. Formuliere sinnvolle Hilsfragen statt direkt zu antworten.
+### Situation 8: Letzter Teilnehmer
+Lara möchte automatisch den letzten Namen der Liste ausgeben ("Tim"), erhält aber "undefined".
 
 ```js
 let teilnehmer = ["Serhij", "Lara", "Tim"];
@@ -243,5 +243,5 @@ let teilnehmer = ["Serhij", "Lara", "Tim"];
 console.log(teilnehmer[teilnehmer.length - 1]);
 ```
 
-<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>```length``` nicht dekrementiert.</span> <a href="https://www.w3schools.com/jsref/jsref_length_array.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>```length``` entspricht der Anzahl, der letzte Index ist immer ```length - 1```.</span> <a href="https://www.w3schools.com/jsref/jsref_length_array.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
 </details>

@@ -3,7 +3,7 @@ title: PHP
 ---
 
 # PHP-Grundlagen
-Lernende bearbeiten Logik- und Syntaxaufgaben in PHP, um die serverseitige Logik für den Skitag zu entwickeln. Du begleitest den Lernprozess und unterstützt mit Micro-Scaffolding bei typischen PHP-Stolperfallen.
+Lernende bearbeiten Logik- und Syntaxaufgaben in PHP, um die serverseitige Logik für die Organisation einer Radtour zu entwickeln. Du begleitest den Lernprozess und unterstützt mit Micro-Scaffolding bei typischen PHP-Stolperfallen.
 
 ## Aufgabe: Hilfsfragen formulieren
 Finde passende unterstützende Fragen nach den Regeln des Micro-Scaffolding für die folgenden Situationen beim Erlernen von PHP.
@@ -17,8 +17,8 @@ Gehe dabei wie folgt vor:
 
 ```php
 <?php
-$skifahrer = 10;
-echo $Skifahrer;
+$radfahrer = 10;
+echo $Radfahrer;
 ```
 
 :::tip[Scaffold]
@@ -27,7 +27,7 @@ echo $Skifahrer;
 
 <summary>Tipp 1</summary>
 
-Vergleichen Sie die Bezeichner (Namen nach dem $-Zeichen) in der Definition und in der Ausgabe ganz genau.
+In PHP wird bei Variablennamen strikt zwischen Groß- und Kleinschreibung unterschieden.
 
 </details>
 
@@ -35,7 +35,7 @@ Vergleichen Sie die Bezeichner (Namen nach dem $-Zeichen) in der Definition und 
 
 <summary>Tipp 2</summary>
 
-In PHP wird bei Variablennamen strikt zwischen Groß- und Kleinschreibung unterschieden.
+Vergleichen Sie die Bezeichner (Namen nach dem $-Zeichen) in der Definition und in der Ausgabe ganz genau.
 
 </details>
 :::
@@ -46,8 +46,8 @@ In PHP wird bei Variablennamen strikt zwischen Groß- und Kleinschreibung unters
 
 ```php {3}
 <?php
-$skifahrer = 10;
-echo $skifahrer;
+$radfahrer = 10;
+echo $radfahrer;
 ```
 
 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Variablennamen unterschiedlich.</span> <a href="https://www.w3schools.com/php/php_variables.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
@@ -56,12 +56,12 @@ echo $skifahrer;
 
 ---
 
-### Situation 1
+### Situation 1: Zielort festlegen
 
 ```php
 <?php
-$skigebiet;
-echo $skigebiet;
+$tourziel;
+echo $tourziel;
 ```
 
 <details>
@@ -69,22 +69,22 @@ echo $skigebiet;
 
 ```php {2}
 <?php
-$skigebiet = "Feldberg";
-echo $skigebiet;
+$tourziel = "Bodensee";
+echo $tourziel;
 ```
 
-<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Zuweisung fehlte.</span> <a href="https://www.w3schools.com/php/php_variables.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Zuweisung eines Wertes fehlte.</span> <a href="https://www.w3schools.com/php/php_variables.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
 </details>
 
 ---
 
-### Situation 2
+### Situation 2: Preis-Anzeige mit Währung
 
 ```php
 <?php
 $preis = "45";
-$waehrung = " Euro";
-echo $preis + $waehrung;
+$waehrung = "Euro";
+echo $preis + " " + $waehrung;
 ```
 
 <details>
@@ -93,23 +93,23 @@ echo $preis + $waehrung;
 ```php {4}
 <?php
 $preis = "45";
-$waehrung = " Euro";
-echo $preis . $waehrung;
+$waehrung = "Euro";
+echo $preis . " " . $waehrung;
 ```
 
-<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Punkt (.) statt Plus (+) für Verkettung.</span> <a href="https://www.w3schools.com/php/php_operators.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>PHP nutzt Punkt (.) statt Plus (+) für die String-Verkettung.</span> <a href="https://www.w3schools.com/php/php_operators.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
 </details>
 
 ---
 
-### Situation 3
+### Situation 3: Temperatur-Warnung
 
 ```php
 <?php
-$temperatur = -5;
+$temperatur = 0;
 
 if ($temperatur = 0) {
-  echo "Frostgrenze";
+  echo "Temperatur ist genau am Gefrierpunkt";
 }
 ```
 
@@ -118,26 +118,26 @@ if ($temperatur = 0) {
 
 ```php {4}
 <?php
-$temperatur = -5;
+$temperatur = -2;
 
 if ($temperatur == 0) {
-  echo "Frostgrenze";
+  echo "Temperatur ist genau am Gefrierpunkt";
 }
 ```
 
-<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Zuweisung (=) statt Vergleich (==).</span> <a href="https://www.w3schools.com/php/php_if_else.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Zuweisung (=) statt Vergleich (==) innerhalb der Bedingung.</span> <a href="https://www.w3schools.com/php/php_if_else.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
 </details>
 
 ---
 
-### Situation 4
+### Situation 4: Alle übrigen Räder verleihen
 
 ```php
 <?php
-$uebrigeLiftplaetze = 4;
+$uebrigeRaeder = 4;
 
-while ($uebrigeLiftplaetze > 0) {
-  echo "Es sind noch Plätze frei";
+while ($uebrigeRaeder > 0) {
+  echo "Ein Rad wurde erfolgreich verliehen.";
 }
 ```
 
@@ -146,26 +146,26 @@ while ($uebrigeLiftplaetze > 0) {
 
 ```php {6}
 <?php
-$uebrigeLiftplaetze = 4;
+$uebrigeRaeder = 4;
 
-while ($uebrigeLiftplaetze > 0) {
-  echo "Es sind noch Plätze frei";
-  $uebrigeLiftplaetze--; 
+while ($uebrigeRaeder > 0) {
+  echo "Ein Rad wurde erfolgreich verliehen.";
+  $uebrigeRaeder--; 
 }
 ```
 
-<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Schleifenvariable unverändert.</span> <a href="https://www.w3schools.com/php/php_loop_while.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Schleifenvariable nicht verändert (-> Endlosschleife).</span> <a href="https://www.w3schools.com/php/php_loop_while.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
 </details>
 
 ---
 
-### Situation 5
-Max flucht, weil sein Programm nichts ausgibt. Formuliere sinnvolle Hilfsfragen.
+### Situation 5: Tour-Start
+Max flucht, weil sein Programm die Ankündigung nicht ausgibt. Formuliere sinnvolle Hilfsfragen.
 
 ```php
 <?php
-function macheAnkuendigung() {
-  echo "Der Bus fährt jetzt ab!";
+function starteRadtour() {
+  echo "Die Radtour ist offiziell eröffnet!";
 }
 ```
 
@@ -174,11 +174,11 @@ function macheAnkuendigung() {
 
 ```php {6}
 <?php
-function macheAnkuendigung() {
-  echo "Der Bus fährt jetzt ab!";
+function starteRadtour() {
+  echo "Die Radtour ist offiziell eröffnet!";
 }
 
-macheAnkuendigung();
+starteRadtour();
 ```
 
 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Funktionsaufruf fehlt.</span> <a href="https://www.w3schools.com/php/php_functions.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
@@ -186,13 +186,13 @@ macheAnkuendigung();
 
 ---
 
-### Situation 6
-Elif wundert sich, dass ihr Programm nichts ausgibt. Formuliere sinnvolle Hilfsfragen.
+### Situation 6: Kosten-Kalkulation
+Elif wundert sich, dass ihr Programm den Gesamtpreis nicht ausgibt. Formuliere sinnvolle Hilfsfragen.
 
 ```php
 <?php
-function berechneGesamtpreis($ticket, $verleih) {
-  $ticket + $verleih;
+function berechneGesamtpreis($radmiete, $verpflegung) {
+  $radmiete + $verpflegung;
 }
 
 echo berechneGesamtpreis(40, 20);
@@ -203,26 +203,26 @@ echo berechneGesamtpreis(40, 20);
 
 ```php {3}
 <?php
-function berechneGesamtpreis($ticket, $verleih) {
-  return $ticket + $verleih;
+function berechneGesamtpreis($radmiete, $verpflegung) {
+  return $radmiete + $verpflegung;
 }
 
 echo berechneGesamtpreis(40, 20);
 ```
 
-<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Rückgabe fehlt.</span> <a href="https://www.w3schools.com/php/php_functions.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Rückgabe (```return```-Anweisung) fehlt.</span> <a href="https://www.w3schools.com/php/php_functions.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
 </details>
 
 ---
 
-### Situation 7
-Hussein ruft dich, weil die Konsole einen Fehler ausgibt, wenn er auf den Helm zugreifen will. Formuliere sinnvolle Hilsfragen.
+### Situation 7: Packliste abrufen
+Hussein erhält eine Fehlermeldung ("Notice: Undefined offset"), wenn er den Helm anzeigen will. Formuliere sinnvolle Hilfsfragen.
 
 ```php
 <?php
-$ausruestung = ["Ski", "Stöcke", "Helm"];
+$packliste = ["Schloss", "Pumpe", "Helm"];
 
-echo $ausruestung[3];
+echo $packliste[3];
 ```
 
 <details>
@@ -230,18 +230,18 @@ echo $ausruestung[3];
 
 ```php {4}
 <?php
-$ausruestung = ["Ski", "Stöcke", "Helm"];
+$packliste = ["Schloss", "Pumpe", "Helm"];
 
-echo $ausruestung[2];
+echo $packliste[2];
 ```
 
-<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Index falsch.</span> <a href="https://www.w3schools.com/php/php_arrays.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Falscher Array-Index.</span> <a href="https://www.w3schools.com/php/php_arrays.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
 </details>
 
 ---
 
-### Situation 8
-Lara fragt, warum das Programm einen Fehler meldet, wenn sie den letzten Teilnehmer ausgeben will. Formuliere sinnvolle Hilsfragen statt direkt zu antworten.
+### Situation 8: Letzter Teilnehmer in der Liste
+Lara möchte das Element ausgeben. Formuliere strategische Fragen.
 
 ```php
 <?php
@@ -260,5 +260,5 @@ $teilnehmer = ["Serhij", "Lara", "Tim"];
 echo $teilnehmer[count($teilnehmer) - 1];
 ```
 
-<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>count nicht dekrementiert.</span> <a href="https://www.w3schools.com/php/php_arrays.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Anzahl nicht dekrementiert.</span> <a href="https://www.w3schools.com/php/php_arrays.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
 </details>

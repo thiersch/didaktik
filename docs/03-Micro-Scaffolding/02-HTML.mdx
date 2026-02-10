@@ -3,7 +3,7 @@ title: HTML
 ---
 
 # HTML-Grundlagen
-Lernende beschäftigen sich mit HTML als Grundlage von Webentwicklung. Sie zeichnen Inhalte einer Website zur Organisation des Skitags aus. Du begleitest den Lernprozess und unterstützt mit Micro-Scaffolding.
+Lernende beschäftigen sich mit HTML als Grundlage der Webentwicklung. Sie zeichnen Inhalte einer Website zur Organisation einer Radtour aus. Du begleitest den Lernprozess und unterstützt mit Micro-Scaffolding.
 
 ## Aufgabe: Hilfsfragen formulieren
 Finde passende unterstützende Fragen nach den Regeln des Micro-Scaffolding für die folgenden Situationen beim Erlernen von Webentwicklung.
@@ -48,7 +48,7 @@ Haben Sie alle Tag-Namen korrekt geschrieben?
 </html>
 ```
 
-<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Buchstabendreher im schließenden HTML-Tag.</span> <a href="https://www.w3schools.com/html/html_elements.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Buchstabendreher im Tag.</span> <a href="https://www.w3schools.com/html/html_elements.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
 
 </details>
 
@@ -60,19 +60,23 @@ Haben Sie alle Tag-Namen korrekt geschrieben?
 ### Situation 1
 
 ```html
-<h1>Anmeldung Skitag
+<section>
+<h2>Anmeldung zur Radtour
 <p>Melde dich am besten direkt an!</p>
+</section>
 ```
 
 <details>
 <summary>Der korrigierte Code</summary>
 
-```html {1}
-<h1>Anmeldung Skitag</h1>
+```html {2}
+<section>
+<h2>Anmeldung zur Radtour</h2>
 <p>Melde dich am besten direkt an!</p>
+</section>
 ```
 
-<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>h1 wurde nicht geschlossen.</span> <a href="https://www.w3schools.com/html/html_elements.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>```h2-```Tag nicht geschlossen.</span> <a href="https://www.w3schools.com/html/html_elements.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
 
 </details>
 
@@ -84,7 +88,7 @@ Haben Sie alle Tag-Namen korrekt geschrieben?
 <!DOCTYPE html>
 <html lang="de">
    <head>
-     <titel>Skitag</titel>
+     <titel>Radtour Planung</titel>
    </head>
 ```
 
@@ -95,11 +99,11 @@ Haben Sie alle Tag-Namen korrekt geschrieben?
 <!DOCTYPE html>
 <html lang="de">
    <head>
-     <title>Skitag</title>
+     <title>Radtour Planung</title>
    </head>
 ```
 
-<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>title wurde falsch geschrieben.</span> <a href="https://www.w3schools.com/tags/tag_title.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Tag-Name falsch geschrieben.</span> <a href="https://www.w3schools.com/tags/tag_title.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
 
 </details>
 
@@ -112,7 +116,7 @@ Haben Sie alle Tag-Namen korrekt geschrieben?
 <!DOCTYPE html>
 <html> lang="de"
    <head>
-     <titel>Skitag</titel>
+     <title>Radtour Planung</title>
    </head>
 ```
 
@@ -123,11 +127,11 @@ Haben Sie alle Tag-Namen korrekt geschrieben?
 <!DOCTYPE html>
 <html lang="de">
    <head>
-     <title>Skitag</title>
+     <title>Radtour Planung</title>
    </head>
 ```
 
-<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Attribut lang außerhalb des html-Tags.</span> <a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Attribut außerhalb des Tags.</span> <a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
 
 </details>
 
@@ -137,60 +141,59 @@ Haben Sie alle Tag-Namen korrekt geschrieben?
 
 
 ```html
-<h1>Anmeldung Skitag<h1>
-Melde dich am besten direkt an!
+<h1>Informationen zur Tour<h1>
+Wähle eine passende Route für dich aus.
 <p></p>
-Alles was du brauchst findest du im Folgenden.
+Alle Karten findest du im Downloadbereich.
 ```
 
 <details>
 <summary>Der korrigierte Code</summary>
 
 ```html {2,3}
-<h1>Anmeldung Skitag</h1>
-<p>Melde dich am besten direkt an!</p>
-<p>Alles was du brauchst findest du im Folgenden.</p>
+<h1>Informationen zur Tour</h1>
+<p>Wähle eine passende Route für dich aus.</p>
+<p>Alle Karten findest du im Downloadbereich.</p>
 ```
 
-<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Falsche Verwendung des p-Tags.</span> <a href="https://www.w3schools.com/html/html_paragraphs.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Fehlerhafte ```p```-Tag Verwendung (Verwechslung von "Absatz" und "Zeilenumbruch").</span> <a href="https://www.w3schools.com/html/html_paragraphs.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
 
 </details>
 
 ---
 
-### Situation 5
+### Situation 5: Bild einbinden
 
 ```html
-<img scr="mountains.jpg" alt="Verschneite Berge">
+<img scr="fahrrad.jpg" alt="Mountainbike im Wald">
 ```
 
 <details>
    <summary>Der korrigierte Code</summary>
 
 ```html
-<img src="mountains.jpg" alt="Verschneite Berge">
+<img src="fahrrad.jpg" alt="Mountainbike im Wald">
 ```
 
-<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Falsch geschriebenes Attribut src.</span> <a href="https://www.w3schools.com/html/html_images.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Attribut-Name ```src``` falsch.</span> <a href="https://www.w3schools.com/html/html_images.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
 
 
 </details>
 
 ---
 
-### Situation 6
+### Situation 6: Verschachtelte Liste
 
 ```html
 <h3>Checkliste</h3>
 <ul>
-   <li>Ski</li>
+   <li>Fahrrad</li>
    <li>Helm</li>
-   <li>Rucksack</li>
+   <li>Werkzeug</li>
    <ul>
-     <li>Sonnencreme</li>
-     <li>Ausweis</li>
-     <li>Vesper</li>
-     <li>Getränke</li>
+     <li>Flicken</li>
+     <li>Pumpe</li>
+     <li>Inbus</li>
    </ul>
 </ul>
 ```
@@ -198,54 +201,61 @@ Alles was du brauchst findest du im Folgenden.
 <details>
    <summary>Der korrigierte Code</summary>
 
-```html {5,12}
+```html {5,11}
 <h3>Checkliste</h3>
 <ul>
-   <li>Ski</li>
+   <li>Fahrrad</li>
    <li>Helm</li>
-   <li>Rucksack
+   <li>Werkzeug
    <ul>
-     <li>Sonnencreme</li>
-     <li>Ausweis</li>
-     <li>Vesper</li>
-     <li>Getränke</li>
+     <li>Flicken</li>
+     <li>Pumpe</li>
+     <li>Inbus</li>
    </ul>
    </li>
 </ul>
 ```
 
-<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Innere Liste nicht in Listenelement li der äußeren Liste.</span> <a href="https://stackoverflow.com/questions/5899337/proper-way-to-make-html-nested-list" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Innere Liste nicht innerhalb von ```li```</span> <a href="https://stackoverflow.com/questions/5899337/proper-way-to-make-html-nested-list" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
 
 </details>
 
 ---
 
-### Situation 7
+### Situation 7: Semantik
 
 ```html
-<a "https://www.bergfex.at">Hier gehts zum Pistenplan</a>
+<article>
+   <head></head>
+   <section></section>
+   <section></section>
+</article>
 ```
 
 <details>
    <summary>Der korrigierte Code</summary>
 
-```html
-<a href="https://www.bergfex.at">Hier gehts zum Pistenplan</a>
+```html {2}
+<article>
+   <header></header>
+   <section></section>
+   <section></section>
+</article>
 ```
 
-<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>URL ohne Attribut verwendet.</span> <a href="https://www.w3schools.com/html/html_links.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Verwechslung ```header``` und ```head```.</span> <a href="https://www.mediaevent.de/html/html-section-header.html" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
 
 </details>
 
 ---
 
-### Situation 8
+### Situation 8: Anmeldeformular
 
 ```html
-<!--- Code ist innerhalb eines Formulars --->
-   <label>Name:</label>
-   <input name="username">
-   <button type="submit">Anmelden</button>
+   <!-- innerhalb von Formular -->
+   <label>Vorname:</label>
+   <input name="firstname">
+   <button type="submit">Absenden</button>
 </form>
 ```
 
@@ -253,13 +263,13 @@ Alles was du brauchst findest du im Folgenden.
    <summary>Der korrigierte Code</summary>
 
 ```html {2-3}
-<!--- Code ist innerhalb eines Formulars --->
-   <label for="user">Name:</label>
-   <input id="user" name="username">
-   <button type="submit">Anmelden</button>
+   <!-- innerhalb von Formular -->
+   <label for="fname">Vorname:</label>
+   <input id="fname" name="firstname">
+   <button type="submit">Absenden</button>
 </form>
 ```
 
-<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Fehlende Verknüpfung (for / id).</span> <a href="https://www.w3schools.com/tags/tag_label.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}> <span>Zuordnung ```for```/```id``` fehlt.</span> <a href="https://www.w3schools.com/tags/tag_label.asp" target="_blank" style={{ backgroundColor: '#32965D', color: 'white', padding: '5px 12px', borderRadius: '6px', textDecoration: 'none', fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap' }}> Mehr Hilfe im Web </a> </div>
 
 </details>
