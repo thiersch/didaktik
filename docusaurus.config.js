@@ -72,7 +72,7 @@ const config = {
         },
         items: [
           {
-            href: 'https://link.excalidraw.com/l/1ADmoFV17l5/5qNGI7mzS2G',
+            href: 'https://link.excalidraw.com/l/1ADmoFV17l5/8kc3BwWrs80',
             label: 'Whiteboard',
             position: 'right',
           },
