@@ -72,8 +72,8 @@ const config = {
         },
         items: [
           {
-            href: 'https://excalidraw.com/#room=16f1e5114ff5791e6529,klAicSL2vXNVksLgChaYvA',
-            label: 'Web-Tafel',
+            href: 'https://link.excalidraw.com/l/1ADmoFV17l5/5qNGI7mzS2G',
+            label: 'Whiteboard',
             position: 'right',
           },
         ],
