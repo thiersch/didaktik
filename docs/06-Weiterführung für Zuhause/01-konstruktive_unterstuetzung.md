@@ -89,27 +89,27 @@ Die alltägliche Situation in Klassenzimmern zeigt oftmals ein diffuses Bild. Ne
     ### Beziehung & Lernklima
     Lernende erleben Fehler als erlaubt und sinnvoll.
 
-```
+
 *Beispiel:* „Der Fehler hilft uns zu verstehen, wie der Code denkt.“
-```
+
 
   </Column>
   <Column className="text--left">
     ### Diagnose
     Die Lehrkraft interessiert sich für Denkwege, nicht nur für Ergebnisse.
 
-```
+
 *Beispiel:* „Was war deine Idee hinter dieser Lösung?“
-```
+
 
   </Column>
   <Column className="text--left">
     ### Scaffolding
     Unterstützung wird **gestuft** angeboten und wieder zurückgenommen.
 
-```
+
 *Beispiel:* Leitfrage → Codegerüst → Erklärung
-```
+
 
   </Column>
 </Columns>
@@ -120,14 +120,18 @@ Die alltägliche Situation in Klassenzimmern zeigt oftmals ein diffuses Bild. Ne
 
 Nicht jeder Fehler ist gleich – für konstruktive Unterstützung ist die **Einordnung entscheidend**.
 
+Typische Fehler Lernender:
 * **Fachlicher Fehler:** Fehler in Logik, Syntax, Anwendung
 * **Lernprozess-Fehler:** notwendiger Zwischenschritt im Denken
+
+Typische Fehler Lehrender:
+
 * **Bewertungsfehler:** entsteht durch unangemessene Rückmeldung der Lehrkraft
 
 ---
 
 <details>
-  <summary>Übung 1: Fehler einordnen</summary>
+  <summary>Übung 1: Fehler von Lehrenden und Lernenden einordnen</summary>
 
 <ItemMatch taskData={[
 { id: 'f1', text: 'Die if-Bedingung wird nie wahr.', answer: 'Fachlicher Fehler' },
@@ -138,9 +142,6 @@ Nicht jeder Fehler ist gleich – für konstruktive Unterstützung ist die **Ein
 
 </details>
 
-
-Scaffolding
-Sie ist die gerade richtig dosierte Begleitung selbstbestimmten Lernens.
 
 ---
 
@@ -167,6 +168,8 @@ Sprache ist eines der **wirksamsten Werkzeuge** konstruktiver Unterstützung.
 
 ---
 
+
+
 ## Scaffolding: Hilfe dosieren
 
 Konstruktive Unterstützung bedeutet nicht, sofort zu erklären, sondern **gezielt Hilfe anzubieten**:
@@ -185,6 +188,13 @@ Konstruktive Unterstützung bedeutet nicht, sofort zu erklären, sondern **gezie
     Modellieren, explizite Erklärung
   </Column>
 </Columns>
+
+:::info[Merke]
+
+
+Scaffolding ist die gerade richtig dosierte Begleitung selbstbestimmten Lernens.
+
+:::
 
 ---
 
@@ -253,3 +263,5 @@ answers: [
 ## Merksatz
 
 > *Konstruktive Unterstützung zeigt sich nicht im schnellen Erklären, sondern im professionellen Begleiten von Lernprozessen.*
+
+---
